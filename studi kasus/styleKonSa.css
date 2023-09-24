@@ -13,6 +13,13 @@ h2 {
     display: flex;
     margin: 20px;
     padding: 45px;
+    border: 3px black solid;
+    border-radius: 25px;
+}
+.pembungkus:hover {
+    background-color: aqua;
+    color:bisque;
+    border-radius: 45px;
 }
 .celcius1 {
     margin: 10px;
