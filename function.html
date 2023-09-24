@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //pemanggilan function
+        function surat() {
+            console.log('hello');
+        }
+        function surat2() {
+            console.log('halo juga')
+        }
+        function pemanggilanFunction() { //function ini untuk memanggil function diatasnya
+            surat();
+            surat2();
+        }
+        pemanggilanFunction(); //ini untuk manggil
+
+        // function dengan parameter
+        function isiPesan(from, text) {
+            console.log(from + ' : ' + text);
+        }
+        isiPesan('andi', 'ini aku'); //ini untu mengisi from & text
+        isiPesan('joko', 'apa kabar?');
+
+        //default value 
+        function pesan(from, text) {
+            console.log(from + ' : ' + text);
+        }
+        pesan('andi');
+
+        //mengatur default value
+        function percob(from, text = 'apa kabar?') { //= untuk mengatur default value, jd jk tdak diisi makaa akan muncul apa kabar
+            console.log(from + ' : ' + text);
+        }
+        percob('undin');
+
+        //perkalian menggunakan function
+        function multiply() {
+            return 2 * 3;
+        }
+
+        //return value
+        function valuePengembalian(a, b) { // a&b adalah permisalan dari 5, dan 89
+            return a + b; //disini nilai akan dikembalikan,
+        }
+        let hasil= valuePengembalian(5,89); //disini nilai akan jumlahkan sesuai return a+b
+        console.log(hasil); //hasil 89 sesuai dari hasil 5+89
+    </script>
+</head>
+
+<body>
+    <h2>Surat</h2>
+    <p id="hasil"></p>
+    <script>
+        document.getElementById("hasil").innerText = multiply() // ini berfungsi untuk menambahakan hasil dr js ke body web
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Perbaiki format atribut content -->
+    <title>Document</title>
+    <script>
+        var tp = prompt('Silakan masukkan nilai pertama!');
+        alert('Pilihanmu adalah ' + tp);
+
+        var tp2 = prompt('Silakan masukkan nilai kedua!');
+        alert('Pilihanmu adalah ' + tp2);
+
+        var tp3 = prompt('Silakan masukkan nilai ketiga!');
+        alert('Pilihanmu adalah ' + tp3);
+
+        function acak() {
+            var c = Math.random();
+            if (c <= 0.15) {
+                alert('Maka pilihannya ' + tp);
+            } else if (c <= 0.66) {
+                alert('Maka pilihannya ' + tp2);
+            } else {
+                alert('Maka pilihannya ' + tp3);
+            }
+        }
+        
+        // Pemilihan jawaban
+        acak();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

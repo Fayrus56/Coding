@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Satuan</title>
+    <link rel="stylesheet" href="styleKonSa.css">
+</head>
+<body>
+    <h2>Konversi Satuan</h2>
+    <div class="pembungkus">
+        <div class="celcius1">Celcius to Farenheit</div>
+        <div class="celcius2">Celcius to Kelvin</div>
+        <div class="celcius3">Celcius to Reamur</div>
+    </div>
+    <script>
+        var masukNilai = prompt('Masukkan nilai yang ingin dikonversikan!')
+        var userInput = parseFloat(masukNilai)
+        var kon = prompt('Anda mau mengonversikannya kedala apa? "k"/"r"/"f"')
+        var hasilKon
+        if (kon == 'k') {
+             hasilKon = userInput + 273
+        } else if (kon == 'r'){
+            hasilKon = userInput * 0.8
+        } else {
+            hasilKon = userInput * 1.8 + 32
+        }
+        console.log(hasilKon);
+
+        // Menampilkan hasil konversi ke dalam dokumen HTML
+        var hasilDiv = document.createElement('div');
+        hasilDiv.textContent = 'Hasil konversi: ' + hasilKon;
+        document.body.appendChild(hasilDiv);
+    </script>
+</body>
+</html>

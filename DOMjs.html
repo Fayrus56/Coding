@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ini getElementById -->
+    <h2>This is DOM JS</h2>
+    <p id="intro">Finding html element by id</p>
+    <main>
+        <article>
+            <p>kamu adalah orang yang.....</p>
+            <p class="isi"></p>
+        </article>
+    </main>
+    <p id="demo"></p>
+    <script>
+        //getElementById
+        const element = document.getElementById('intro') //ini memanggil id intro
+        document.getElementById('demo').innerHTML = //didini menambahkan text ke id demo
+        'This paragraph from the id element' + element.innerHTML; //+element.innerhtml ini untk + id intro ke dalam id demo
+        //getElementByClass
+        const tes = document.getElementsByClassName('intro');
+        document.getElementById('demo').innerHTML 
+        
+        //ini menanmbahkan k class iss
+        const b = document.getElementsByClassName('isi').innerHTML; = 'baik' + element.innerHTML
+
+    </script>
+    <br>
+    <br>
+    <br>
+    <h2>DOM with getElementByClass</h2>
+    <p class="intro">hello</p>
+    <p class="intro">Example</p>
+    <p id="demo"></p>
+</body>
+</html>
