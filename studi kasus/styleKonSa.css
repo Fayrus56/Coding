@@ -9,23 +9,9 @@ h2 {
     text-align: center;
     color: rgb(247, 144, 9);
 }
-
-h2:hover{
-    border: 2px black dashed;
-    position: relative;
-    animation: h2 1s cubic-bezier(.17, .67, .83, .67) infinite;
+::selection {
+    background-color: bisque;
 }
-
-@keyframes h2 {
-    from {
-        top: 0;
-    }
-
-    to {
-        top: 300px;
-    }
-}
-
 .pembungkus {
     display: flex;
     margin: 20px;
@@ -35,34 +21,33 @@ h2:hover{
 }
 
 .pembungkus:hover {
-    background-color: aqua;
-    color: bisque;
-    border-radius: 45px;
-}
+        animation: pembungkus 1000ms cubic-bezier(0.9, 0.7, 0.5, 0.9) infinite;
+    }
+
 
 .celcius1 {
-    margin: 10px;
+    margin: 20px;
     padding: 15px;
     background-color: cornflowerblue;
     border-radius: 15%;
     text-align: center;
-    min-height: auto;
+    min-width: 150px;
 }
 
 .celcius2 {
-    margin: 10px;
+    margin: 20px;
     padding: 15px;
     background-color: cornflowerblue;
     border-radius: 15%;
     text-align: center;
-    min-height: auto;
+    min-width: 150px;
 }
 
 .celcius3 {
-    margin: 10px;
+    margin: 20px;
     padding: 15px;
     background-color: cornflowerblue;
     border-radius: 15%;
     text-align: center;
-    min-width: 200px;
+    min-width: 150px;
 }
