@@ -15,10 +15,11 @@ body.append(h1) //ini untuk memasukkan h1 k body
 
 //misal ini saya akan menambahakan element p
 const Para = document.createElement('p')
-Para.textContent = 'ini paragraf'
+Para.textContent = 'ini paragraf' //sama seperti innerText tp dia bisa mengakses elemen yg tersembunyi css
 body.append(Para)
 
 //ini pake inner html
+//inner html menambah & mengganti element/tag html di dalam element yg diproses
 const para2 = document.createElement('p')
 para2.innerHTML = '<marquee>ini aku</marquee>' //marquee in untuk membuat text berjalan
 body.append(para2)
