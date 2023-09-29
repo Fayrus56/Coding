@@ -26,5 +26,17 @@ body.append(para2)
 
 //ini pake innet taxt
 const text = document.createElement('p') //ini bisa menambahkan semua element html
-text.innerText ='<marquee>ini paragraf kedua</marquee>' //inner text akan mengbaikan tag html & sekedar menanipulasinya
+text.innerText = '<marquee>ini paragraf kedua</marquee>' //inner text akan mengbaikan tag html & sekedar menanipulasinya
 body.append(text)
+
+//selector
+const btn2 = document.getElementById('btn2') //ini untuk menghubungkan k id btn2 di html
+const btn1 = document.getElementById('btn1') //ini untuk menghubungkan k id btn1 di html
+
+//ini untuk style halaman html
+btn1.style.fontSize = '15px'
+btn1.style.background='blue'
+btn1.style.color='white'
+btn2.style.background='blue'
+btn2.style.color='white'
+btn2.style.fontSize='15px'
