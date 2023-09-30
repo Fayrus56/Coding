@@ -30,8 +30,8 @@ text.innerText = '<marquee>ini paragraf kedua</marquee>' //inner text akan mengb
 body.append(text)
 
 //selector
-const btn2 = document.getElementById('btn2') //ini untuk menghubungkan k id btn2 di html
-const btn1 = document.getElementById('btn1') //ini untuk menghubungkan k id btn1 di html
+const btn2 = document.getElementById('btn2') //ini untuk menghubungkan k id btn2 di html pk id
+const btn1 = document.querySelector('.btn2') //ini untuk menghubungkan k id btn1 di html (. untuk class)(#untuk id)
 
 //ini untuk style halaman html
 btn1.style.fontSize = '15px'
