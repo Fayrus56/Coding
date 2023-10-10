@@ -13,28 +13,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body id="home">
+    <!-- ke file js -->
+    <script src="main.js"></script>
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow p-3">
       <div class="container-fluid">
-          <a class="navbar-brand" href="#">A. Yusuf Fayrus</a>
-          <img src="profil/foto profil ke2.jpg" alt="Bootstrap" width="30" height="24" class="d-inline-block align-text-top" />
+        <a class="navbar-brand" href="#">A. Yusuf Fayrus</a>
+        <img src="profil/logofix (1).png" alt="Yusuf" width="100" height="90" class="d-inline-block align-text-top" />
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#about-me">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link" href="#projek">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Me</a>
+              <a class="nav-link" href="#contect-me">Contact Me</a>
             </li>
           </ul>
         </div>
@@ -57,31 +59,114 @@
     <!-- jumbotron end -->
 
     <!-- about me start -->
-    <section>
-      <div class="container text-center">
-        <div class="row">
+    <section id="about-me">
+      <div class="container-mt-5">
+        <div class="row text-center mb-2">
           <div class="col">
             <h2>About Me</h2>
           </div>
         </div>
       </div>
       <div class="row justify-content-center fs-5">
-        <div class="col-4">
+        <div class="col-md-4 text-center">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae vero perspiciatis est quam, obcaecati enim atque repellendus sint doloribus voluptatum ut. Voluptate, fuga eos soluta
-            mollitia, vitae consectetur ducimus vero maiores, ullam laboriosam minus labore dolorum asperiores beatae aperiam deserunt accusantium perferendis doloremque recusandae nam aut fugit
-            saepe. Blanditiis, minima.
+            Saya masih belaajar tentang Web Developer, dan saya akan terus berusaha untuk menguasainya. Saya sudah belajar WebDev sekitar 2 bulanan. Pada awalnya saya hanya belajar secara otodidak,
+            tetapi karna saya merasa apa yang saya pelajari stuck (tidak berkembang).
           </p>
         </div>
-        <div class="col-4">
+        <div class="col-md-4 text-center">
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error rem consequuntur molestiae odit sapiente obcaecati similique molestias provident. Dignissimos vel corrupti ipsum quidem!
-            Accusamus, iusto consequatur! Libero in et odio numquam ducimus facilis ab dolorem, animi, non vero officia similique nobis? Labore amet et dolor vel necessitatibus voluptatem aut odio.
+            khirnya saya mengambil kursus online, dimana materinya lebih terstruktur dan hal tersebut mempermudah saya dalam belaajar WebDev. Saya mempunyai target setiap harinya untuk membuat 1 mini
+            projek setiap harinya.
           </p>
         </div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#e2edff"
+          fill-opacity="1"
+          d="M0,32L34.3,42.7C68.6,53,137,75,206,112C274.3,149,343,203,411,186.7C480,171,549,85,617,69.3C685.7,53,754,107,823,149.3C891.4,192,960,224,1029,234.7C1097.1,245,1166,235,1234,202.7C1302.9,171,1371,117,1406,90.7L1440,64L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+      </svg>
     </section>
     <!-- about me end -->
+
+    <!-- projects -->
+    <section id="projek">
+      <div class="container-mt-5">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>My Projects</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- ini projek1 -->
+        <div class="col-md-4 mb-3">
+          <div class="card" style="width: 18rem">
+            <img src="profil/gambar projek1.jpg" class="card-img-top" alt="Projects 1" />
+            <div class="card-body">
+              <h3>Membuat Web Conversi Suhu</h3>
+              <p class="card-text">Projek ini melatih saya dalam mengguanakan JavaScript
+                dan melatih kemampuan dalam menyelesaikan permasalahan dalam progam
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ini projek2 -->
+        <div class="col-md-4 mb-3">
+          <div class="card" style="width: 18rem">
+            <img src="profil/gambar projek2.jpg" class="card-img-top" alt="Projects 2" />
+            <div class="card-body">
+              <h3>Membuat Game Suit Jawa</h3>
+              <p class="card-text">Projek ini melatih saya dalam penggunaan bahasa
+                pemprogaman JavaScript 
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ini projek3 -->
+        <div class="col-md-4 mb-3">
+          <div class="card" style="width: 18rem">
+            <img src="profil/gambar projek3.jpg" class="card-img-top" alt="Projects 3" />
+            <div class="card-body">
+              <h3>Membuat Web Portofolio</h3>
+              <p class="card-text">Projek ini berisi pencapaian, dan perkembangan saya, 
+                web ini adalah salah satu projek yang bermula dari kebosanan saya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,128L20,149.3C40,171,80,213,120,208C160,203,200,149,240,144C280,139,320,181,360,176C400,171,440,117,480,122.7C520,128,560,192,600,208C640,224,680,192,720,202.7C760,213,800,267,840,250.7C880,235,920,149,960,138.7C1000,128,1040,192,1080,224C1120,256,1160,256,1200,234.7C1240,213,1280,171,1320,160C1360,149,1400,171,1420,181.3L1440,192L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"></path>
+      </svg>
+    </section>
+    <!-- projects end -->
+
+    <!-- contect me -->
+    <section id="contect-me">
+      <div class="container-mt-5">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Contect Me</h2>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col">
+            <h4>Media Sosial</h4>
+            <div class="medsos">
+              <button id="ig" onclick="tIG()">Instagram</button>
+              <button id="wa" onclick="tWA()">WhassApps</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contect me end -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

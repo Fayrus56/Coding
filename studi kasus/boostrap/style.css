@@ -1,9 +1,37 @@
 .jumbotron {
     padding-top: 2rem;
-    background-color: #e2edff ;
+    background-color: #e2edff;
 }
 
 /* style about me  */
 .row {
+    margin-left: 10px;
+}
+
+/* style bagian projek */
+#projek {
+    background-color: #e2edff;
+}
+
+.container-fluid {
+    margin-left: 5px;
+}
+
+/* medsos ig */
+.medsos {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* tombol contak */
+button {
+    background-color: #0e6dfd;
+    color: white;
+    border-radius: 15px;
+    padding: 7px;
+}
+
+/* tombol wa */
+#wa {
     margin-left: 10px;
 }
