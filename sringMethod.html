@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="contoh"></p>
+    <script>
+        let a = ["pisang", "apel", "jeruk nipis"]; //hasil : 3 karna jumlah elemen pd array
+        let b = a.length //lenght digunakan unuk menagetahui jumlah array
+        console.log(b);
+
+        //contoh kedua
+        let x = "halo "
+        let h = x.length
+        console.log(h); //hasilnya adalah 5 karna sepasi jg dihitung
+
+        // substring 
+        let str = 'hello world';
+        let tes = str.substring(0,6); //substring() — Method ini digunakan untuk mengambil bagian dari sebuah string.
+        console.log(tes); //hasilnya hello karna dlm js perhitungan karaker dmulai dari 0 
+
+        //substr ini g jauh beda dari substring
+        let j = 'halo juga';
+        let has = j.substr(1,4)
+        console.log(has);
+
+        //slice sm kyk subsring
+        let cx = 'bosan sekali';
+        let kl = cx.slice(0,3)
+        console.log(kl);
+
+        //split digunakan unk memisaahkan sebuah string
+        let joko = 'joko anak baik';
+        let pk = joko.split("  ");
+
+        //penggunaan start dan end disrting
+        let nm = 'satu dua tiga';
+        let yg = nm.slice(-1) //hasil : ! dah cmn gitu
+
+        const yu = 'kiwi, pisang, apel';
+        var hasil= yu.slice(6,13);
+        document.getElementById('contoh').innerHTML = hasil;
+
+
+    </script>
+</body>
+</html>

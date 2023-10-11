@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        let q = 10.2345
-        let r = 
+      let q = 10.2345;
+      let r = q.toFixed(3); //ini untuk membulatkan bil
+      console.log(r);
+
+      //toPrecision
+      let w = 21.0987;
+      let e = w.toPrecision(2);
+      console.log(e); //ini hanya akan dibulatkan sesuai urutan angkajd ini kasinya 21
+
+      let t = 2.5;
+      let y = parseFloat(t); //ini membulstksn ke dlm bentuk pecahan
+      console.log(t);
+
+      let u = "123";
+      let i = Number(u);
+      console.log(i); // mengubah string menjadi number
     </script>
-</body>
+  </body>
 </html>
