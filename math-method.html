@@ -6,6 +6,7 @@
     <title>Document</title>
   </head>
   <body>
+    <p id="case"></p>
     <script>
       let q = 10.2345;
       let r = q.toFixed(3); //ini untuk membulatkan bil
@@ -23,6 +24,48 @@
       let u = "123";
       let i = Number(u);
       console.log(i); // mengubah string menjadi number
+
+      let num = 1000;
+      let pl = num.toExponential(); // ini akan menampilkan jumlah nol pada angka
+      console.log(pl);
+
+      //math method
+      const kl = Math.abs(-56); //ini akan mengubah ke nilai +
+      console.log(kl);
+
+      // math max digunakan unutk mencari nilai tertinggi/terbesar dr brp bil
+      const nb = Math.max(10, 23, 239, 457, 756, 1903, 1897, 1986);
+      console.log("nilai max " + nb);
+
+      // math min ini untuk mencari nilai terkecul dlm suatu kumpulan bil
+      const bc = Math.min(10, -2, -908, -98, -234, 78);
+      console.log("nilai min " + bc);
+
+      // math random
+      function membuatAngkaRandom() {
+        return Math.floor(Math.random() * 10);
+      }
+
+      const angkaAcak = membuatAngkaRandom();
+      console.log("didapatkan nilai " + angkaAcak);
+
+      // math round= membulatkan ke nilai terdekat
+      let qw = Math.round(2.5);
+      let er = Math.round(5.78);
+      let ok = Math.round(2.4);
+
+      let hasilBulatan = [qw, er, ok];
+      console.log(hasilBulatan);
+
+      // math floor akan membulatkan ke nilai dibawhnya
+      let mc = Math.floor(7.98); // result : 7 karna dibulatkan ke bawah
+      console.log(mc);
+
+      //  math ceil
+      let mnv = Math.ceil(7.98); //hasil 8 karna dibulatkan keatas
+      let qew = Math.ceil(7.1); //hasil 8 karna dibulatkan keatas
+      let hs = [mnv, qew];
+      console.log(hs);
     </script>
   </body>
 </html>
