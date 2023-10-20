@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript ARRAY</h1>
+    <p>length propety</p>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+
+    <script>
+      // akan mengembalikan nilai berupa panjang array
+      const buah = ["pisang", "apel", "pir", "siwalan", "durian", "kelengkeng"];
+      let sz = buah.length;
+      document.getElementById("demo").innerHTML = sz;
+
+      // to string ,mengubah ke string semuanya
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo2").innerHTML = fruits.toString();
+
+      // join berfungsi untuk menambahkan suatu karakter kedalam array
+      const bacaBuah = ["aple ", "kelengkeng ", " nanas"];
+      document.getElementById("demo3").innerHTML = bacaBuah.join(" 'makan'");
+
+      // pop
+      const aple = ["apple", "nanas", "mangga"];
+      aple.pop();
+      document.getElementById("demo4").innerHTML = "yang dibagian paling belakang kan dihapus " + aple;
+
+      // push ini untuk menambhakan isi yg baru
+      const lkp = ['ini ', 'itu ', 'dan lain sebagainya']
+      lkp.push('kiwi');
+      document.getElementById('demo5').innerHTML = 'menambahkan '+lkp;
+    </script>
+  </body>
+</html>
