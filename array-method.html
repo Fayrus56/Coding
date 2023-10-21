@@ -36,9 +36,19 @@
       document.getElementById("demo4").innerHTML = "yang dibagian paling belakang kan dihapus " + aple;
 
       // push ini untuk menambhakan isi yg baru
-      const lkp = ['ini ', 'itu ', 'dan lain sebagainya']
-      lkp.push('kiwi');
-      document.getElementById('demo5').innerHTML = 'menambahkan '+lkp;
+      const lkp = ["ini ", "itu ", "dan lain sebagainya"];
+      lkp.push("kiwi");
+      document.getElementById("demo5").innerHTML = "menambahkan " + lkp;
+
+      //Metode shift() menghapus elemen larik pertama dan "menggeser" semua elemen lainnya ke indeks yang lebih rendah.
+      const ini = ["ini ", "mau", "gak jelas"];
+      ini.shift();
+      document.getElementById("demo6").innerHTML = "menghapus bagian pertama " + ini;
+
+      // unshif ini akan menambahkan string ke bagian awal array
+      const koo = ["capek ", "bosen ", "energi terbatas"];
+      koo.unshift("sdh lah ");
+      document.getElementById("demo7").innerHTML = "ini unshift " + koo;
     </script>
   </body>
 </html>
