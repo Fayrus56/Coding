@@ -15,6 +15,13 @@
     <p id="demo5"></p>
     <p id="demo6"></p>
     <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
 
     <script>
       // akan mengembalikan nilai berupa panjang array
@@ -30,18 +37,18 @@
       const bacaBuah = ["aple ", "kelengkeng ", " nanas"];
       document.getElementById("demo3").innerHTML = bacaBuah.join(" 'makan'");
 
-      // pop
+      // pop= menghapus elemen terakhir dr sebuah array
       const aple = ["apple", "nanas", "mangga"];
       aple.pop();
       document.getElementById("demo4").innerHTML = "yang dibagian paling belakang kan dihapus " + aple;
 
-      // push ini untuk menambhakan isi yg baru
+      // push ini untuk menambhakan isi yg baru, diakhir array
       const lkp = ["ini ", "itu ", "dan lain sebagainya"];
       lkp.push("kiwi");
       document.getElementById("demo5").innerHTML = "menambahkan " + lkp;
 
       //Metode shift() menghapus elemen larik pertama dan "menggeser" semua elemen lainnya ke indeks yang lebih rendah.
-      const ini = ["ini ", "mau", "gak jelas"];
+      const ini = ["ini ", "mau", " gak jelas"];
       ini.shift();
       document.getElementById("demo6").innerHTML = "menghapus bagian pertama " + ini;
 
@@ -49,6 +56,47 @@
       const koo = ["capek ", "bosen ", "energi terbatas"];
       koo.unshift("sdh lah ");
       document.getElementById("demo7").innerHTML = "ini unshift " + koo;
+
+      // stringify Metode ini mengonversi objek atau nilai JavaScript menjadi string JSON. Metode ini juga dapat digunakan untuk mengubah array menjadi string
+      const fur = ["pisang", "nanas", "apel", "mangga"];
+      let tx = JSON.stringify(fur);
+      document.getElementById("demo8").innerHTML = "ini hasil dari  JSON.stringify(): " + tx;
+
+      // Type coercion mengubah array menjadi string. Ini sgt tidak direkomendasikan
+      const hjkll = ["pisang", "nanas", "apel", "mangga"];
+      let cf = "" + hjkll;
+      document.getElementById("demo9").innerHTML = "ini hasil dari type coercion " + cf;
+
+      // splice() meguabh dan menghapus isi array
+      const ijnk = ["pisang", "nanas", "apel", "mangga"];
+      ijnk.splice(1, 2, "lemon", "kiwi");
+      // angka 1 element baru akan ditambahkan setelah element nanas, INGAT INDEX DIMULAI DARI 0
+      // DAN angka 2 jumlah elemen yang akan dihapus sebelum elemen-elemen baru ditambahkan.
+      document.getElementById("demo10").innerHTML = "ini hasil dari splice " + ijnk;
+
+      // array sort = mengurutkan berdasrkan abjad, dr terkecil hingga terbesar
+      const mkjn = ["berry", "cery", "apel", "duku", "manggis"];
+      mkjn.sort();
+      document.getElementById("demo11").innerHTML = "objeck didalam array akan diurutkan berdasarkan abjad a-z: " + mkjn;
+
+      // array sort ini untuk mengurutkan angka
+      const points = [40, 100, 1, 5, 25, 10];
+      points.sort(function (a, b) {
+        return a - b;
+      });
+      document.getElementById('demo12').innerHTML = 'ini hasil dari uturan angka dr terkecil k terbesar '+ points
+      // array sort ini untuk mengurutkan angka
+      const kebalik = [40, 100, 1, 5, 25, 10];
+      kebalik.sort(function (a, b) {
+        return b-a;
+      });
+      document.getElementById('demo13').innerHTML = 'ini hasil dari uturan angka dr terbesar ke terkeil '+ kebalik
+
+      // array sort in reverse
+      const nmbbf = ["berry", "cery", "apel", "duku", "manggis"];
+      nmbbf.sort(); // ini sdh urut a-z
+      nmbbf.reverse(); //tp disini dibalik jd z-a
+      document.getElementById("demo14").innerHTML = "objeck didalam array akan diurutkan berdasarkan alfabet z-a: " + nmbbf;
     </script>
   </body>
 </html>
