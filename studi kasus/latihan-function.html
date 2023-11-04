@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <script>
+      // panjang tiap sisi kubus
+      let kubusA = 10;
+      let kubusB = 12;
+      //   pengkalian untuk mencari volume
+      let volumeA = kubusA * kubusA * kubusA;
+      let volumeB = kubusB * kubusB * kubusB;
+      //   lalu ditotal
+      let totalVolume = volumeA + volumeB;
+
+      //   kode di atas akan dibuat lebih efisien
+
+      function totalVol(a, b) {
+        var volumeC;
+        var volumeD;
+        var totalSemuanya;  
+        volumeC = a * a * a;
+        volumeD = b * b * b;
+        totalSemuanya = volumeC + volumeD;
+        return totalSemuanya;
+      }
+      console.log(totalVol(2,4));
+
+      document.getElementById("demo1").innerHTML = totalVol(7, 8);
+      console.log(totalVol(8, 9));
+    </script>
+  </body>
+</html>
