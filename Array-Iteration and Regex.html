@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        let a = 'visit myWebPorto'
-        let b = a.search(/myWebporto/i); // penambahan /i/ supaya menjadi tdk peka hurf besar kecil
-        console.log(b);
+      let a = "visit myWebPorto";
+      let b = a.search(/myWebporto/i); // penambahan /i/ supaya menjadi tdk peka hurf besar kecil
+      console.log(b);
 
-        // cara mencari suatu huruf/kata dari sebuah array
-        let nbv = /my/i; // ini akan mencari kata 'my'
-        let vcc = 'My WEB PORTOVOLIO';
-        // console.log(nbv.test(vcc));
-        let vc= nbv.test(vcc);
-        console.log(vc);
+      // cara mencari suatu huruf/kata dari sebuah array
+      let nbv = /my/i; // ini akan mencari kata 'my'
+      let vcc = "My WEB PORTOVOLIO";
+      // console.log(nbv.test(vcc));
+      let vc = nbv.test(vcc);
+      console.log(vc);
+
+      //   fungsi callback -> menampilkan semuanya
+      const arrsy = [1, 2, 3, 4];
+      arrsy.forEach(function (element) {
+        console.log(element);
+      });
+
+      //   menggunakan parameter thisArg
+      const obk = {
+        name: "Yusuf",
+        age: 14,
+      };
+      const ary = [1, 2, 3];
+      ary.forEach(function (element) {
+        console.log(element + this.age);
+      })
     </script>
-</body>
-</html> 
+  </body>
+</html>
