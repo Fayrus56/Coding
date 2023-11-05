@@ -7,6 +7,8 @@
   </head>
   <body>
     <p id="demo1"></p>
+    <h3>ini hasil perkalianya :</h3>
+    <h5 id="demo2"></h5>
     <script>
       // panjang tiap sisi kubus
       let kubusA = 10;
@@ -19,19 +21,29 @@
 
       //   kode di atas akan dibuat lebih efisien
 
-      function totalVol(a, b) { //didalam kurung itu merupakan parameter
+      function totalVol(a, b) {
+        //didalam kurung itu merupakan parameter
         var volumeC;
         var volumeD;
-        var totalSemuanya;  
+        var totalSemuanya;
         volumeC = a * a * a;
         volumeD = b * b * b;
         totalSemuanya = volumeC + volumeD;
         return totalSemuanya;
       }
-      console.log(totalVol(2,4)); //2 dan 4 ini merupakan argument
+      console.log(totalVol(2, 4)); //2 dan 4 ini merupakan argument
 
       document.getElementById("demo1").innerHTML = totalVol(7, 8);
       console.log(totalVol(8, 9));
+
+      // studi kasus kedua
+      function tambah(a, b) {
+        return a * b;
+      }
+      var nilai1 = parseInt(prompt("masukkan nilai 1: "));
+      var nilai2 = parseInt(prompt("masukkan nilai 2: "));
+      let hasil = tambah(nilai1, nilai2);
+      document.getElementById("demo2").innerHTML = hasil;
     </script>
   </body>
 </html>
