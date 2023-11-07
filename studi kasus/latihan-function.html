@@ -36,6 +36,15 @@
       document.getElementById("demo1").innerHTML = totalVol(7, 8);
       console.log(totalVol(8, 9));
 
+      // kode diatas akan saya buat lebih efisien
+
+      function hasiPerhitungan(a, b) {
+        var cvb = a * a * a + b * b * b;
+        return cvb;
+      }
+
+      console.log("hasilnya " + hasiPerhitungan(2, 4));
+
       // studi kasus kedua
       function tambah(a, b) {
         return a + b;
@@ -61,37 +70,38 @@
 
       // jika parameter < argument
       function tambah3(a, b, c) {
-        return a + b+c;
+        return a + b + c;
       }
       let hasil4 = tambah3(2, 3); //argument hanya diisi oleh 2 number saja, sisa kekuarangannya akan diisi dgn nilsi undifined
       console.log(hasil4);
 
       // ini hanya permisalan jika arguments -> berisi byk parameter
-      function permisalan () {
+      function permisalan() {
         return arguments; //disini akan mengembalikan nilai arguments
       }
-      let cob= permisalan(2,3,45,'hai',false);
+      let cob = permisalan(2, 3, 45, "hai", false);
       console.log(cob);
 
       // studi kasus jika argument tidak menentu jumlahnya
-      function inihasil() { //jadi ini tak perlu menyesuaikan function lagi jk ada perubahan argumnent
+      function inihasil() {
+        //jadi ini tak perlu menyesuaikan function lagi jk ada perubahan argumnent
         var hasi = 0;
-        for (var i =0; i <arguments.length; i++){
+        for (var i = 0; i < arguments.length; i++) {
           hasi += arguments[i];
         }
         return hasi;
       }
-      var kjkfk = inihasil(1,2,3,56,67) // disini argumnet bisa diisi dnegan argumen sebanyak dan bebas
+      var kjkfk = inihasil(1, 2, 3, 56, 67); // disini argumnet bisa diisi dnegan argumen sebanyak dan bebas
       console.log(kjkfk);
 
       function iniyangkedua() {
         var hasil5 = 0;
-        for(var cv =0; cv <arguments.length; cv++) {
+        for (var cv = 0; cv < arguments.length; cv++) {
           hasil5 += arguments[cv];
         }
         return hasil5;
       }
-      var bvcc = iniyangkedua(9,0,7);
+      var bvcc = iniyangkedua(9, 0, 7);
       console.log(bvcc);
     </script>
   </body>
