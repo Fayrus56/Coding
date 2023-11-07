@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Rekursif</h1>
+    <p>Rekursif adalah proses pemanggilan dirinya sendiri (fungsi atau prosedur). - Fungsi maupun prosedur yang memanggil dirinya disebut fungsi atau prosedur rekursif.</p>
+    <h4>Base Case</h4>
+    <p>kondisi akhir dari rekursif yang menghasikan nilai</p>
+    <script>
+      // contoh penggunaan rekursif MISALkan kita ingin membuat rutan 10-1, sy akan menggunakan function
+      function tampilan(n) {
+        console.log(n);
+        return tampilan(n - 1);
+      }
+      console.log(tampilan(10)); //infinite
+      // base case
+    </script>
+  </body>
+</html>
