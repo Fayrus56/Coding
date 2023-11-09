@@ -10,14 +10,46 @@
     <p>Rekursif adalah proses pemanggilan dirinya sendiri (fungsi atau prosedur). - Fungsi maupun prosedur yang memanggil dirinya disebut fungsi atau prosedur rekursif.</p>
     <h4>Base Case</h4>
     <p>kondisi akhir dari rekursif yang menghasikan nilai</p>
+    <p id="demo1"></p>
     <script>
       // contoh penggunaan rekursif MISALkan kita ingin membuat rutan 10-1, sy akan menggunakan function
       function tampilan(n) {
+        if (n === 0) {
+          return;
+        }
         console.log(n);
         return tampilan(n - 1);
       }
       console.log(tampilan(10)); //infinite
-      // base case
+
+      //   studi kasus, disini menggunakan faktorial -> 5*4*3*2*1
+      function faktorial(n) {
+        if (n === 0) return 1;
+        return n * faktorial(n - 1);
+      }
+      console.log("sdh bener" + faktorial(7));
+
+      // studi kasus fobanacci ini contoh sederhananya
+      function fobanacci(a, b) {
+        if (a === 0) return 0;
+        if (b === 0) return 1;
+        return a + b;
+      }
+
+      document.getElementById("demo1").innerHTML = "hasil dari fobanacci " + fobanacci(1, 2);
+
+      // studi kasus fobanacci lebih kompleks
+      function fobanacciUrutan(length) {
+        let urutan = [1, 1]; // ini dua suku pertama
+        for (let i = 2; i < length; i++) {
+          const nextNum = urutan[i - i] + urutan[i - 2];
+          urutan.push(nextNum);
+        }
+        return urutan;
+      }
+      const length = 12;
+      const fobanacci1 = fobanacciUrutan(length);
+      console.log(fobanacci1);
     </script>
   </body>
 </html>
