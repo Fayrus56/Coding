@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // manipulasi array
+      let arr = [1, 2, 3, 4]; //ingat index dimulai dari0
+      console.log(arr[1]); //ini menampilkan 2 karna dua memiliki index ke-1
+
+      // menghapus array
+      let ray = ["Audrey", "Yusuf", "Fayrus"];
+      ray[0] = undefined;
+      console.log(ray);
+
+      // menampilkan array
+      let ray1 = ["Audrey", "Yusuf", "Fayrus", 'Danu', 'Piku'];
+
+      for (var i = 0; i < ray1.length; i++) {
+        console.log("Siswa ke-" + (i + 1) + " : " + ray1[i]);
+      }
+    </script>
+  </body>
+</html>
