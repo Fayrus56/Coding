@@ -24,6 +24,8 @@
     <p id="demo14"></p>
 
     <script>
+      // array method
+
       // akan mengembalikan nilai berupa panjang array
       const buah = ["pisang", "apel", "pir", "siwalan", "durian", "kelengkeng"];
       let sz = buah.length;
@@ -33,26 +35,26 @@
       const fruits = ["Banana", "Orange", "Apple", "Mango"];
       document.getElementById("demo2").innerHTML = fruits.toString();
 
-      // join berfungsi untuk menambahkan suatu karakter kedalam array
+      // join(gabung) berfungsi untuk menambahkan suatu karakter kedalam array
       const bacaBuah = ["aple ", "kelengkeng ", " nanas"];
       document.getElementById("demo3").innerHTML = bacaBuah.join(" 'makan'");
 
-      // pop= menghapus elemen terakhir dr sebuah array
+      // pop(letakan)= menghapus elemen terakhir dr sebuah array
       const aple = ["apple", "nanas", "mangga"];
       aple.pop();
       document.getElementById("demo4").innerHTML = "yang dibagian paling belakang kan dihapus " + aple;
 
-      // push ini untuk menambhakan isi yg baru, diakhir array
+      // push(dorong) ini untuk menambhakan isi yg baru, diakhir array
       const lkp = ["ini ", "itu ", "dan lain sebagainya"];
       lkp.push("kiwi");
       document.getElementById("demo5").innerHTML = "menambahkan " + lkp;
 
-      //Metode shift() menghapus elemen larik pertama dan "menggeser" semua elemen lainnya ke indeks yang lebih rendah.
+      //Metode shift(geser) menghapus elemen larik pertama dan "menggeser" semua elemen lainnya ke indeks yang lebih rendah.
       const ini = ["ini ", "mau", " gak jelas"];
       ini.shift();
       document.getElementById("demo6").innerHTML = "menghapus bagian pertama " + ini;
 
-      // unshif ini akan menambahkan string ke bagian awal array
+      // unshif(hapus) ini akan menambahkan string ke bagian awal array
       const koo = ["capek ", "bosen ", "energi terbatas"];
       koo.unshift("sdh lah ");
       document.getElementById("demo7").innerHTML = "ini unshift " + koo;
@@ -84,13 +86,13 @@
       points.sort(function (a, b) {
         return a - b;
       });
-      document.getElementById('demo12').innerHTML = 'ini hasil dari uturan angka dr terkecil k terbesar '+ points
+      document.getElementById("demo12").innerHTML = "ini hasil dari uturan angka dr terkecil k terbesar " + points;
       // array sort ini untuk mengurutkan angka
       const kebalik = [40, 100, 1, 5, 25, 10];
       kebalik.sort(function (a, b) {
-        return b-a;
+        return b - a;
       });
-      document.getElementById('demo13').innerHTML = 'ini hasil dari uturan angka dr terbesar ke terkeil '+ kebalik
+      document.getElementById("demo13").innerHTML = "ini hasil dari uturan angka dr terbesar ke terkeil " + kebalik;
 
       // array sort in reverse
       const nmbbf = ["berry", "cery", "apel", "duku", "manggis"];
@@ -100,10 +102,22 @@
 
       // membuat urutan angka dari terkecil hingga terbesar
       const poins = [1, 2, 3, 45, 668];
-      poins.sort(function(a, b){
-         a-b;
+      poins.sort(function (a, b) {
+        a - b;
       });
       console.log(poins);
+
+      // versi sandhika galih, dan contoh penggunaan yang lebih spesifik
+      // join
+      let ray = ["Audrey", "Yusuf", "Fayrus"];
+      // push array
+      ray.push("Dody", 'Dani');
+      // pop menghapus elemen teakhir
+      ray.pop();
+      console.log(ray.join(" - "));
+      // console.log(ray.join(' ')); //string kosong digunakan unk spasi, dan spasi sebagai separator/ pemisah
+      // unshift
+       
     </script>
   </body>
 </html>
