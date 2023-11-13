@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h2>Daftar Nilai</h2>
-    <p id="demo1">Ini rata-rata niali: </p>
+    <p id="demo1">Ini rata-rata niali:</p>
     <p id="demo2"></p>
     <p id="demo3"></p>
     <p id="demo4"></p>
     <script>
-        // data nilai siswa
-        let nilaiSiswa = [10, 23, 45, 56, 78, 98, 100, 100, 95, 98];
-        // function yang menghitunf nilai siswa
-        function rataRata(niali) {
-            let total = 0;
-            for (let i = 0; i < niali.length; i++) {
-                total += niali[i]
-            }
-            return total / niali.length
+      // data nilai siswa
+      let nilaiSiswa = [10, 23, 45, 56, 78, 98, 100, 100, 95, 98];
+      // function yang menghitunf nilai siswa
+      function rataRata(niali) {
+        let total = 0;
+        for (let i = 0; i < niali.length; i++) {
+          total += niali[i];
         }
-        document.getElementById('demo1').innerHTML = 'Nilai siswa: ' + nilaiSiswa.join(' - ');
-        document.getElementById('demo2').innerHTML = 'Nilai rata-rata siswa: ' + rataRata(nilaiSiswa);
-        console.log(nilaiSiswa);
-        console.log(rataRata(nilaiSiswa));
-        // menambhkan value baru
-        nilaiSiswa.push (88, 90, 100);
-        nilaiSiswa.pop (); //menghilangkan element array terakhir
-        document.getElementById('demo3').innerHTML = 'Nilai siswa baru: ' + nilaiSiswa;
-        document.getElementById('demo4').innerHTML = 'Nilai rata-rata siswa setela ditambahkan: ' + rataRata(nilaiSiswa);
-
-
+        return total / niali.length;
+      }
+      document.getElementById("demo1").innerHTML = "Nilai siswa: " + nilaiSiswa.join(" - ");
+      document.getElementById("demo2").innerHTML = "Nilai rata-rata siswa: " + rataRata(nilaiSiswa);
+      console.log(nilaiSiswa);
+      console.log(rataRata(nilaiSiswa));
+      // menambhkan value baru
+      nilaiSiswa.push(88, 90, 100);
+      nilaiSiswa.pop(); //menghilangkan element array terakhir
+      document.getElementById("demo3").innerHTqML = "Nilai siswa baru: " + nilaiSiswa;
+      document.getElementById("demo4").innerHTML = "Nilai rata-rata siswa setela ditambahkan: " + rataRata(nilaiSiswa);
     </script>
-</body>
-
+  </body>
 </html>
