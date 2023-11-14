@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <script>
+      let antrean = ["Dudi", "Masre", "Ona", "Joyo", "Yuddu"]; //ini yang mengantri dikasir
+      // lalu untuk melayani mereka, perlu mengambil element pertama
+      // tentunya ini tidak bisa mengguanakn pop, karna pop mengambil elemnt dr paling belakang
+      antrean.shift(); //ini akan mengambil array dari index 0
+      // misal ada pelanggan baru datang
+      antrean.push("Abu");
+      console.log(antrean); //karna dudi sdh dikeluarkan dari antrean maka terisa 4 array
+
+    //   dimisalkan lagi datang pelanggan vip
+    antrean.unshift('VIP');
+
+    // success
+    </script>
+  </body>
 </html>
