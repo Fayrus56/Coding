@@ -107,17 +107,22 @@
       });
       console.log(poins);
 
+      // includes() --> mencari argument, dan akan memiliki value
+      let is = [1, 2, 3, 45, 6, 767];
+      let o = is.includes(2);
+      console.log(o); //true karna les is mengandung angka 2
+      let yt = is.includes(0);
+      console.log(yt); //false
+
       // versi sandhika galih, dan contoh penggunaan yang lebih spesifik
       // join
       let ray = ["Audrey", "Yusuf", "Fayrus"];
       // push array
-      ray.push("Dody", 'Dani');
+      ray.push("Dody", "Dani");
       // pop menghapus elemen teakhir
       ray.pop();
       console.log(ray.join(" - "));
       // console.log(ray.join(' ')); //string kosong digunakan unk spasi, dan spasi sebagai separator/ pemisah
-      // unshift
-       
     </script>
   </body>
 </html>
