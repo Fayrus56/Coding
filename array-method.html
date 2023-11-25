@@ -22,6 +22,7 @@
     <p id="demo12"></p>
     <p id="demo13"></p>
     <p id="demo14"></p>
+    <h4 id='h1'></h4>
 
     <script>
       // INGAT JS PEKA HURUF BESAR KECIL
@@ -74,7 +75,7 @@
       document.getElementById("demo9").innerHTML =
         "ini hasil dari type coercion " + cf;
 
-      // splice() meguabh dan menghapus isi array
+      // splice() meguabh dan menghapus isi array -> menyambung ditengah
       const ijnk = ["pisang", "nanas", "apel", "mangga"];
       ijnk.splice(1, 2, "lemon", "kiwi");
       // angka 1 element baru akan ditambahkan setelah element nanas, INGAT INDEX DIMULAI DARI 0
@@ -141,6 +142,13 @@
         "ini reverse " + we.reverse() + "ini nilai nya menjadi kebalik"
       );
 
+      // slice -> mengiris
+      // slice (awal, akhir)
+      var asw = ["yusuf", "fayrus", "qewry", "rest ", "inkan"];
+      var ryxf = asw.splice(0, 2); // Mengambil dua nilai pertama dari 'asw'
+      document.getElementById('h1').innerHTML='ini splice '+ryxf;
+      console.log(ryxf); // Menampilkan nilai-nilai yang dihapus dari 'asw'
+
       // versi sandhika galih, dan contoh penggunaan yang lebih spesifik
       // join
       let ray = ["Audrey", "Yusuf", "Fayrus"];
@@ -155,7 +163,25 @@
       // misal menambahkan sebuah var array menggunakan const
       const yus = [1, 2, 3, 4]; // ini tetap bisa diubah
       // cth
-      console.log("ini arr" + yus.push(5));
+      yus.push(5); //ini akan memperbarui nilai array, walau si array pake const
+      console.log(yus);
+
+      function upParam(param) {
+        param = 15;
+        console.log("ini nilai didalam function " + param);
+      }
+      let nam = 23;
+      upParam(nam);
+      console.log("ini diluar function " + nam);
+
+      // jika nilai di let diubah ke array maka akan mengubah isi array, dgn isi di param
+      function upParam(param) {
+        param[0] = 15;
+        console.log("ini nilai didalam function " + param);
+      }
+      let namm = [12, 22, 34];
+      upParam(namm);
+      console.log("ini diluar function " + namm);
     </script>
   </body>
 </html>
