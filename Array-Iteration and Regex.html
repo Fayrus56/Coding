@@ -6,6 +6,7 @@
     <title>Document</title>
   </head>
   <body>
+    <p id="demo"></p>
     <script>
       let a = "visit myWebPorto";
       let b = a.search(/myWebporto/i); // penambahan /i/ supaya menjadi tdk peka hurf besar kecil
@@ -20,15 +21,16 @@
 
       //   fungsi callback -> menampilkan semuanya
       const arrsy = [1, 2, 3, 4];
-      arrsy.forEach(function (element) { //ini bisa untuk memanggil function
+      arrsy.forEach(function (element) {
+        //ini bisa untuk memanggil function
         console.log(element);
       });
 
-      // contoh penggunaan 
-      let angka = [1,2,3,4,5,6,7,8,9,10];
+      // contoh penggunaan
+      let angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
       angka.forEach(function (e) {
         console.log(e);
-      })
+      });
 
       //   menggunakan parameter thisArg
       const obk = {
@@ -38,7 +40,17 @@
       const ary = [1, 2, 3];
       ary.forEach(function (element) {
         console.log(element + this.age);
-      })
+      });
+
+      // map -> mengembailakn nilai
+      const numbers = [65, 44, 12, 4];
+      const newArr = numbers.map(myFunction);
+
+      document.getElementById("demo").innerHTML = newArr;
+
+      function myFunction(num) {
+        return num * 10;
+      }
     </script>
   </body>
 </html>
