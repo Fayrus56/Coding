@@ -16,8 +16,8 @@
           //   kembalikan isi arry dan keluar dari function
           return penumpang;
         } else {
-          // terusuri seluruh kuri dari wal
-          for (let i = 0; i < penumpang.length; i++) {
+          // terusuri seluruh kursi dari wal
+          for (let i = 0; i.find()) {
             // jika ada kursi kosong
             if (penumpang[i] == undefined) {
               // tambah penumpang dikursi tersebut
@@ -49,3 +49,35 @@
     </script>
   </body>
 </html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let penumpang = ["John", undefined, "Black"];
+      let tambahPenumpang = function (nPenumpang, penumpang) {
+        if (penumpang.includes(nPenumpang)) {
+          console.log("Penumpang " + nPenumpang + " sudah berada di dalam bus");
+        } else {
+          let kursiKosong = penumpang.indexOf(undefined);
+          if (kursiKosong !== -1) {
+            penumpang[kursiKosong] = nPenumpang;
+            console.log("Penumpang " + nPenumpang + " ditambahkan di kursi " + (kursiKosong + 1));
+          } else {
+            penumpang.push(nPenumpang);
+            console.log("Penumpang " + nPenumpang + " ditambahkan di kursi " + penumpang.length);
+          }
+        }
+        return penumpang;
+      };
+
+      console.log(penumpang);
+      console.log(tambahPenumpang("Michael", penumpang));
+    </script>
+  </body>
+</html> -->
