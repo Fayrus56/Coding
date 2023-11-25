@@ -51,6 +51,26 @@
       function myFunction(num) {
         return num * 10;
       }
+
+      // filter -> mencari nilai dari sebuah array, dan mengembalikan dalam bentuk array juga
+      let q = [1, 2, 3, 5, 7, 8, 20, 19, 15, 12];
+      let r = q.filter(function (c) {
+        return c === 5;
+      });
+      console.log(r.toString()); //disini array diubah menjadi string
+      // misal jk nilai yang dicari adalah lebih dr 5
+      let w = [1, 2, 3, 5, 7, 8, 20, 19, 15, 12];
+      let e = w.filter(function (c) {
+        return c >= 5;
+      });
+      console.log(e.toString(),);
+
+      // find -> menacari 1 niali
+      let t = [1, 2, 3, 5, 7, 8, 20, 19, 15, 12];
+      let f = t.find(function (c) {
+        return c >= 5;
+      });
+      console.log(f.toString(),);
     </script>
   </body>
 </html>
