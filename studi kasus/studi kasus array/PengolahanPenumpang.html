@@ -7,17 +7,24 @@
   </head>
   <body>
     <script>
+      let maxPenumpang = 4; //jumlah penumpang max
       let penumpang = ["John", undefined, "Black"];
       let tambahPenumpang = function (nPenumpang, penumpang) {
+            // jika kursi penuh 
+        if (penumpang.length == maxPenumpang) {
+          console.log('Angkot sudah penuh');
+          return penumpang
+        }
         //   jika penumpang kosong
         if (penumpang.length == 0) {
           // tambah penumpang di awal array
           penumpang.push(nPenumpang);
+      
           //   kembalikan isi arry dan keluar dari function
           return penumpang;
         } else {
           // terusuri seluruh kursi dari wal
-          for (let i = 0; i.) {
+          for (let i = 0; i < penumpang.length; i++) {
             // jika ada kursi kosong
             if (penumpang[i] == undefined) {
               // tambah penumpang dikursi tersebut
@@ -39,7 +46,7 @@
               // kembalikan isi arry
               return penumpang;
             }
-          }
+          } 
         }
       };
 
@@ -49,35 +56,3 @@
     </script>
   </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      let penumpang = ["John", undefined, "Black"];
-      let tambahPenumpang = function (nPenumpang, penumpang) {
-        if (penumpang.includes(nPenumpang)) {
-          console.log("Penumpang " + nPenumpang + " sudah berada di dalam bus");
-        } else {
-          let kursiKosong = penumpang.indexOf(undefined);
-          if (kursiKosong !== -1) {
-            penumpang[kursiKosong] = nPenumpang;
-            console.log("Penumpang " + nPenumpang + " ditambahkan di kursi " + (kursiKosong + 1));
-          } else {
-            penumpang.push(nPenumpang);
-            console.log("Penumpang " + nPenumpang + " ditambahkan di kursi " + penumpang.length);
-          }
-        }
-        return penumpang;
-      };
-
-      console.log(penumpang);
-      console.log(tambahPenumpang("Michael", penumpang));
-    </script>
-  </body>
-</html> -->
