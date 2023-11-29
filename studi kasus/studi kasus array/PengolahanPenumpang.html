@@ -8,7 +8,7 @@
   <body>
     <script>
       let maxPenumpang = 4; //jumlah penumpang max
-      let penumpang = ["John", undefined, "Black"];
+      let penumpang = [];
       let tambahPenumpang = function (nPenumpang, penumpang) {
             // jika kursi penuh 
         if (penumpang.length == maxPenumpang) {
@@ -49,9 +49,33 @@
           } 
         }
       };
+      // turunkan penumpang 
+      let turunkanPenumpang = function (nPenumpang, penumpang) {
+        // jika bus kosong 
+        if (penumpang.length==0) {
+          // tampilkan pesan bus kosong
+          console.log('Bus kosong');
+          return penumpang;
+        }
+        else {
+          // cek keberadaan penumpang
+          let pAda = false;
+          // telusuri selurh kursi 
+          for (let a = 0; a < penumpang.length; a++) {
+            // jika ada penumopang yang turun 
+            if (penumpang[a] == nPenumpang) {
+              penumpang[a] = undefined;
+              pAda = true; //nilai penumpangAda menjadi true jika penumpang ditemukan
+            }
+          }
+          if (!pAda) { //Jika pAda bernilai false (tidak ada penumpang), maka jalankan pernyataan di dalam blok if
+            console.log(nPenumpang + ' tidak ada di bus');
+          }
+        }
+        return penumpang
+      }
 
-      console.log(penumpang);
-      console.log(tambahPenumpang());
+
       
     </script>
   </body>
