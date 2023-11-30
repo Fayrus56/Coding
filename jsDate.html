@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // membuat tanggal di js, sytaxnya itu YYYY/MM/DD/HH.HH/MENIT/SEKON
+      var date = new Date(2022, 12, 30, 10, 30, 0); //ini akan muncul sebagai 2024, karna di js index bln dimulai dari 0, jadi js akan lanjut ke tahun selanjutnya
+      console.log(date);
+      // method date
+      function CreateDate(a) {
+        var customDate= new Date();
+        customDate.getFullYear(2023); //mengamboil nilai tahun(4 diigt)
+        customDate.getMonth(11); //mengamboil nilai bulan (0-11)
+        customDate.getDate(1); //mengamboil nilai tanggal (1-31) 
+        customDate.getDay(1); //mengamboil nilai  hari (0-6)
+        customDate.getHours(10); //mengamboil nilai  jam (0-23)
+        customDate.getMinutes(10);
+        customDate.setSeconds(0);
+        return date;
+      }
+      console.log(Date());
+    </script>
+  </body>
+</html>
