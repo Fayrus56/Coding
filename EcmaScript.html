@@ -9,21 +9,37 @@
     <script>
       // ecma script = dasar dalam mengimplementasikan js
       // arrow function -> memberi kemudahan dalam penulisan function
-      let cekUmur = (a) => { //contoh 1 argument
+      let cekUmur = (a) => {
+        //contoh 1 argument
         if (a >= 12) {
           return true;
         }
         return false;
       };
       console.log(cekUmur(10));
-    //   contoh kedua
-    let tes = a=> console.log(a*a);
-    tes(2);
-    // contoh lebih dari 1 argument
-    let multiply = (a,b) => console.log(a/b);
-    multiply(6,2)
+      //   contoh kedua
+      let tes = (a) => console.log(a * a);
+      tes(2);
+      // contoh lebih dari 1 argument
+      let multiply = (a, b) => console.log(a / b);
+      multiply(6, 2);
 
-    // spread syntax
+      // spread syntax -> mengekspan(memperpendek dalam penulisan array), contoh:
+      let n = [5, 6];
+      let addN = [1, 2, 3, 4, ...n]; //ini akan menggabungkan antara array satu dan lainnya.
+      console.log(addN);
+      // bisa juga dengan cara berikut
+      let d = [3, 4];
+      let addD = [1, 2, d[0], 4, 5]; //[0] -> mennunjukkan index array
+      console.log(addD);
+      // contoh penggunaannya dalam object
+      const name = {
+        firstName: "Yusuf",
+        lastName : 'Fayrus'
+      };
+      const hbd = {ulangTahun:'12 November 2022' };
+      const gabungan = {...name, ...hbd};
+      console.log(gabungan);
     </script>
   </body>
 </html>
