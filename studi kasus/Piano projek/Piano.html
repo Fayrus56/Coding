@@ -8,20 +8,61 @@
       body {
         padding: 0;
         margin: 0;
+        background-color: #f0f0f0;
       }
       h1 {
         text-align: center;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
       }
+      /* style pembungkus tombol */
       #note {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         display: flex;
-        background-color: black;
-        margin: 20px;
-        padding: 0;
-        max-width: fit-content;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
+        margin-top: 50px;
+        width: 800px;
+        height: 278px;
+        background-color: rgb(143, 161, 158);
+        padding: 10px;
+        max-width: fit-content;
+        border-radius: 26px;
       }
+      .whiteNote:hover {
+        transform: scale(-0.95);
+        box-shadow: 2px 2.5px rgb(26, 21, 21, 0.8);
+        
+      }
+      /* style white note  */
+      .whiteNote {
+        width: 50px;
+        height: 100px;
+        background-color: #f0f0f0;
+        border: 2px black solid;
+        border-radius: 15%;
+        position: relative;
+        margin-left: 5px;
+        z-index: -1;
+      }
+      /* style black note  */
+      .blackNote:hover {
+        transform: scale(-0.95);
+        background-color: rgb(95, 94, 94);
+      }
+      .blackNote {
+        width: 30px;
+        height: 150px;
+        background-color: #000;
+        border: 2px black solid;
+        border-radius: 15%;
+        position: relative;
+        margin-left: 3px;
+        z-index: 1000;
+      }
+      /* 
       #noteA {
         margin: 20px;
         background-color: aliceblue;
@@ -60,20 +101,26 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-      }
+      } */
     </style>
   </head>
   <body>
     <h1>Piano Project</h1>
     <!-- pembingkus dari tombol-tombol piano -->
     <div id="note">
-      <div id="noteA">A</div>
-      <div id="noteB">B</div>
-      <div id="noteC">C</div>
-      <div id="noteD">D</div>
+      <div class="whiteNote" id="noteA"></div>
+      <div class="blackNote" id="noteB"></div>
+      <div class="whiteNote" id="noteC"></div>
+      <div class="blackNote" id="noteD"></div>
+      <div class="whiteNote" id="noteE"></div>
     </div>
     <script>
-      const notePiano = ["a", "b", "c", "d"];
+      const chords = ["a", "c", "d", "e"];
+      const note = document.getElementById('note')
+      chords.forEach(chord => {
+        const button = document.createElement('button')
+        note.appendChild(button)
+      })
     </script>
   </body>
 </html>
