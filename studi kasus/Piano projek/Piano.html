@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body {
+       body {
         padding: 0;
         margin: 0;
         background-color: #f0f0f0;
@@ -31,96 +31,91 @@
         max-width: fit-content;
         border-radius: 26px;
       }
-      .whiteNote:hover {
-        transform: scale(-0.95);
-        box-shadow: 2px 2.5px rgb(26, 21, 21, 0.8);
-        
+      
+      /* style tiap tombolnya */
+      button:hover{
+        background-color: aliceblue;
+     
       }
-      /* style white note  */
-      .whiteNote {
+      button:nth-child(1){
         width: 50px;
         height: 100px;
         background-color: #f0f0f0;
-        border: 2px black solid;
+        border: 1.9px black solid;
         border-radius: 15%;
         position: relative;
         margin-left: 5px;
-        z-index: -1;
+        z-index: 3;
       }
-      /* style black note  */
-      .blackNote:hover {
-        transform: scale(-0.95);
-        background-color: rgb(95, 94, 94);
+      button:nth-child(1):focus-within{
+       transform: scale(-0.95);
+       box-shadow:-2px 2px  3px #000;
       }
-      .blackNote {
-        width: 30px;
-        height: 150px;
-        background-color: #000;
-        border: 2px black solid;
+      button:nth-child(2){
+        width: 50px;
+        height: 100px;
+        background-color: #f0f0f0;
+        border: 1.9px black solid;
         border-radius: 15%;
         position: relative;
-        margin-left: 3px;
-        z-index: 1000;
+        margin-left: 5px;
+        z-index: 3;
       }
-      /* 
-      #noteA {
-        margin: 20px;
-        background-color: aliceblue;
-        width: 80px;
-        height: 150px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+      button:nth-child(2):focus-within{
+       transform: scale(-0.95);
+       box-shadow:-2px 2px  3px #000;
       }
-
-      #noteB {
-        margin: 20px;
-        background-color: aliceblue;
-        width: 80px;
-        height: 150px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+      button:nth-child(3){
+        width: 50px;
+        height: 100px;
+        background-color: #f0f0f0;
+        border: 1.9px black solid;
+        border-radius: 15%;
+        position: relative;
+        margin-left: 5px;
+        z-index: 3;
       }
-
-      #noteC {
-        margin: 20px;
-        background-color: aliceblue;
-        width: 80px;
-        height: 150px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+      button:nth-child(3):focus-within{
+       transform: scale(-0.95);
+       box-shadow:-2px 2px  3px #000;
       }
-
-      #noteD {
-        margin: 20px;
-        background-color: aliceblue;
-        width: 80px;
-        height: 150px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      } */
+      button:nth-child(4) {
+        width: 50px;
+        height: 100px;
+        background-color: #f0f0f0;
+        border: 1.9px black solid;
+        border-radius: 15%;
+        position: relative;
+        margin-left: 5px;
+        z-index: 3;
+      }
+      button:nth-child(4):focus-within{
+       transform: scale(-0.95);
+       box-shadow:-2px 2px  3px #000;
+      }
+      /* end style tombol */
+      
     </style>
   </head>
   <body>
     <h1>Piano Project</h1>
     <!-- pembingkus dari tombol-tombol piano -->
     <div id="note">
-      <div class="whiteNote" id="noteA"></div>
-      <div class="blackNote" id="noteB"></div>
-      <div class="whiteNote" id="noteC"></div>
-      <div class="blackNote" id="noteD"></div>
-      <div class="whiteNote" id="noteE"></div>
     </div>
     <script>
       const chords = ["a", "c", "d", "e"];
-      const note = document.getElementById('note')
-      chords.forEach(chord => {
-        const button = document.createElement('button')
-        note.appendChild(button)
-      })
+      const note = document.getElementById("note");
+      chords.forEach((chord) => {
+        const button = document.createElement("button");
+        button.innerText = chord;
+        button.addEventListener('click', () => {
+          const sound = new Audio(`${chord}.wav`)
+          sound.play()
+        })
+        note.appendChild(button);
+
+      });
     </script>
+    
   </body>
 </html>
