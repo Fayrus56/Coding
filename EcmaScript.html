@@ -35,11 +35,39 @@
       // contoh penggunaannya dalam object
       const name = {
         firstName: "Yusuf",
-        lastName : 'Fayrus'
+        lastName: "Fayrus",
       };
-      const hbd = {ulangTahun:'12 November 2022' };
-      const gabungan = {...name, ...hbd};
+      const hbd = { ulangTahun: "12 November 2022" };
+      const gabungan = { ...name, ...hbd };
       console.log(gabungan);
+
+      // ecma screipt dalam loop
+      // ini contoh for of
+      const numbers = [100, 200, 250, 300, 350];
+      //daripada harus nulis satu-satu console log langsung aja pake ini
+      for (const number of numbers) {
+        console.log(number);
+      }
+
+      // perbedaan antara for in dan for of
+      //for in-> biasa digunakan di obj,
+      // for of ->jika digunakan di arry hasilnya adalah index dari arry/obj tersebut
+ 
+      // ini conoth for in
+      const obj = {
+        a:1,
+        b:3,
+        c:5
+      }
+      for (const key in obj) {
+        console.log(`${key} => ${obj[key]}`);
+      }
+    //  jika for in diguunakan di array
+    const a = [1,2,3,4];
+    for(const key in a) {
+      console.log(key);
+    }
+    // yang muncul adalah array-nya
     </script>
   </body>
 </html>
