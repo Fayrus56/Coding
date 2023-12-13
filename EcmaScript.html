@@ -52,22 +52,69 @@
       // perbedaan antara for in dan for of
       //for in-> biasa digunakan di obj,
       // for of ->jika digunakan di arry hasilnya adalah index dari arry/obj tersebut
- 
+
       // ini conoth for in
       const obj = {
-        a:1,
-        b:3,
-        c:5
-      }
+        a: 1,
+        b: 3,
+        c: 5,
+      };
       for (const key in obj) {
         console.log(`${key} => ${obj[key]}`);
       }
-    //  jika for in diguunakan di array
-    const a = [1,2,3,4];
-    for(const key in a) {
-      console.log(key);
-    }
-    // yang muncul adalah array-nya
+      //  jika for in diguunakan di array
+      const a = [1, 2, 3, 4];
+      for (const key in a) {
+        console.log(key);
+      } // yang muncul adalah array-nya
+
+      // Functional progemming (pemprogamman fungsional) -> ini berfunsi unk menghindari perubahnan yang tidak perlu.
+      // contoh yang BUKAN Functional progemming
+      let f = [1, 2, 3, 4, 5, 6];
+      let penjumlahan = 3;
+      function totPenjumlahan(a) {
+        let fv = penjumlahan + " " + f;
+        return fv;
+      }
+      // totPenjumlahan(12)
+      console.log(totPenjumlahan(10)); // jika bukan functional mk, nilai dpt diubah dgn mudah.
+
+      // contoh penggunaan functional progamming filter -> untuk memfilter/mendapatkan nilai dr arry
+      const murid = [
+        { name: "Yusuf", umur: 15 },
+        { name: "Yusuf", umur: 10 },
+        { name: "Yusuf", umur: 11 },
+        { name: "Yusuf", umur: 17 },
+        { name: "Yusuf", umur: 21 },
+        { name: "Yusuf", umur: 18 },
+      ];
+      const output = murid.filter((murid) => murid.umur > 14); // disini akan mencari muruid yg umr-nya lebih dr 14
+      console.log(output);
+      // contoh ke-2, mengunakan remidi
+      const remidi = [
+        { nama: "budi", nilai: 90 },
+        { nama: "budi", nilai: 70 },
+        { nama: "jono", nilai: 20 },
+        { nama: "boy", nilai: 93 },
+      ];
+      const siapaYgRemidi = remidi.filter((remidi) => remidi.nilai < 74);
+      // alert("Ini siswa yang remidi" + siapaYgRemidi.toString);
+      console.log('Ini siswa yang remidi' +siapaYgRemidi);
+
+      // contoh ke-2, mengunakan remidi
+      // function chekNilai(nilai) {
+      //   let sudah = confirm("Ingin memasukan nilai?");
+      //   if (sudah == true) {
+      //     let nilai = prompt("masukan nilai");
+      //     let namMurid = prompt("masukan nama");
+      //   } else {
+      //     alert("oke");
+      //   }
+      //   if (nilai <=74) {
+      //     console.log('remidi');
+      //   }
+      //   return nilai;
+      // }; masih salah
     </script>
   </body>
 </html>

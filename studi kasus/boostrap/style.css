@@ -39,3 +39,16 @@ button {
 .tanggal {
     font-size: small;
 }
+
+.wa {
+    background-color: rgb(40, 199, 109);
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    right: 6px;
+    color: #ffffff;
+}
+.icon:hover {
+    background-color: #ffffff;
+    color: black;
+}
