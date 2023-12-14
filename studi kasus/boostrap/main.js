@@ -12,5 +12,5 @@ function tWA() {
 
 // ini terhubung ke tombol tang mengambang
 function wa() {
-    window.open('https://wa.me/628975828050','_blank')
+    window.open('https://wa.me/628975828050','_blank');
 }
