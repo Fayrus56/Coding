@@ -47,7 +47,7 @@ button {
     right: 20px;
     width: 3.5rem;
     height: 3.5rem;
-    background-color: rgb(110, 211, 79);
+    background-color: rgb(94, 225, 94);
     font-size: 0.5rem;
     color: #ffffff;
     text-decoration: none;
@@ -56,9 +56,10 @@ button {
     justify-content: center;
     align-items: center;
     z-index: 1;
+    border: 2px solid #e2edff;
   }
 
-  .tombol-wa img {
+  .icon-wa{
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
