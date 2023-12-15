@@ -17,6 +17,9 @@
   <body id="home">
     <!-- ke file js -->
     <script src="main.js"></script>
+
+   
+
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow p-3">
       <div class="container-fluid">
@@ -55,14 +58,51 @@
             <li class="nav-item">
               <a class="nav-link" href="#contect-me">Contact Me</a>
             </li>
+
+            <!-- tombol dark and laght mode -->
+            <li class="nav-item">
+              <div class="dropdown" data-bs-theme="light">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonLight" data-bs-toggle="dropdown" aria-expanded="false">
+                  Default dropdown
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLight">
+                  <li><a class="dropdown-item active" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+              
+              <div class="dropdown" data-bs-theme="dark">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dark dropdown
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
+                  <li><a class="dropdown-item active" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
-      </div>
     </nav>
     <!--akhir navbar  -->
 
+    
+    
     <!-- jumbotron start -->
     <section class="jumbotron text-center">
+      <!-- tombol pengubah dark or kight mode
+      <div class="btn-dark-mode">
+        <input type="checkbox" id="switch">
+        <label for="switch"></label>
+      </div> -->
       <img
         src="profil/profil2(perbaikan uk).jpg"
         alt="Yusuf"
@@ -237,8 +277,8 @@
           <div class="col">
             <h4>Media Sosial</h4>
             <div class="medsos">
-              <button id="ig" onclick="tIG()">Instagram</button>
-              <button id="wa" onclick="tWA()">WhassApps</button>
+              <button type="button" class="btn btn-outline-primary" id="tIG" onclick="tIG()">Instagram</button>
+              <button type="button" class="btn btn-outline-primary" id="tWA" onclick="tWA()">WhatsApp</button>
             </div>
           </div>
         </div>
