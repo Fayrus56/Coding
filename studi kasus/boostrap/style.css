@@ -1,6 +1,6 @@
 .jumbotron {
     padding-top: 2rem;
-    background-color: #e2edff;
+    background-color: var(--bs-body-bg);
 }
 
 /* style about me  */
@@ -56,7 +56,8 @@ button {
     justify-content: center;
     align-items: center;
     z-index: 1;
-    border: 2px solid #e2edff;
+    border: 2px solid whitesmoke;
+    color: rgba(32, 30, 27, 0.858);
   }
 
   .icon-wa{
@@ -74,9 +75,18 @@ button {
     --black-ball: black;
   }
 
+
+/* ini style tonggler dark or light mode */
+
   .btn-dark-mode {
-    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    
   }
+
+
 
   #switch {
     width: 0;
@@ -86,34 +96,40 @@ button {
 
   label {
     display: block;
-    width: 60px;
-    height: 25px;
+    width: 55px;
+    height: 28px;
     background-color: var(--primary-label);
     border-radius: 50px;
     position: relative;
-    cursor: pointer;
-    transition: 0.5s;
+    cursor:pointer;
+    transition: 1s;
+    transform: translateY(-12px);
   }
 
+ 
   label::after {
     content: "";
-    width: 23px;
-    height: 23px;
+    width: 25px;
+    height: 25px;
     border-radius: 40px;
     background-color: var(--white-ball);
     position: absolute;
-    top: 1px;
+    top: 1.9px;
     left: 3px;
     transition: 0.5s;
   }
 
   #switch:checked + label::after {
     background-color: var(--black-ball);
-    left: calc(80% - 5px);
+    left: calc(100% - 2px);
     transform: translateX(-100%);
   }
-  #switch + label::before {
-    background-color: var(--white-ball);
-    left: calc(80% - 5px);
-    transform: translateX(-100%);
+  
+
+#switch:checked + label {
+  background-color: var(--secndary-label);
+}
+
+  label:active::after {
+    width: 50px;
   }

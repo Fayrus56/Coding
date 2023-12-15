@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>PIano</title>
     <style>
       body {
         padding: 0;
@@ -177,13 +177,84 @@
         box-shadow: -2px 2px 3px #000;
       }
       /* end style tombol */
+
+      /* ini style dark mode */
+      /* ini var warna */
+      :root {
+        --primary-color: white;
+        --primary-label: black;
+        --secndary-label: white;
+        --white-ball: white;
+        --black-ball: black;
+      }
+
+      /* ini style tonggler dark or light mode */
+
+      .btn-dark-mode {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 0;
+        left: 470px ;
+      }
+
+      #switch {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+      }
+
+      label {
+        display: block;
+        width: 55px;
+        height: 28px;
+        background-color: var(--primary-label);
+        border-radius: 50px;
+        position: relative;
+        cursor: pointer;
+        transition: 1s;
+        transform: translateY(-12px);
+      }
+
+      label::after {
+        content: "";
+        width: 25px;
+        height: 25px;
+        border-radius: 40px;
+        background-color: var(--white-ball);
+        position: absolute;
+        top: 1.9px;
+        left: 3px;
+        transition: 0.5s;
+      }
+
+      #switch:checked + label::after {
+        background-color: var(--black-ball);
+        left: calc(100% - 2px);
+        transform: translateX(-100%);
+      }
+
+      #switch:checked + label {
+        background-color: var(--secndary-label);
+      }
+
+      label:active::after {
+        width: 50px;
+      }
     </style>
   </head>
   <body>
     <h1 class="First">Piano Project</h1>
     <!-- pembingkus dari tombol-tombol piano -->
     <div id="note"></div>
+    <!-- tombol dark and laght mode -->
+    <div class="btn-dark-mode">
+      <input type="checkbox" id="switch" />
+      <label for="switch"></label>
+    </div>
+    <!-- tombol end -->
     <script>
+      // ini untuk tombol piano
       const chords = ["a", "c", "d", "e"];
       const note = document.getElementById("note");
       chords.forEach((chord) => {
@@ -194,6 +265,19 @@
           sound.play();
         });
         note.appendChild(button);
+      });
+      // end
+
+      // // ini dark mode
+      let toggler = document.getElementById("switch");
+      toggler.addEventListener("click", () => {
+        if (toggler.checked === true) {
+          document.body.style.backgroundColor = "rgba(32, 30, 27, 0.99)";
+          document.body.style.color = "white";
+        } else {
+          document.body.style.backgroundColor = "white";
+          document.body.style.color = "black";
+        }
       });
     </script>
   </body>
