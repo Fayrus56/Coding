@@ -1,82 +1,80 @@
 .jumbotron {
-    padding-top: 2rem;
-    background-color: var(--bs-body-bg);
+  padding-top: 2rem;
+  background-color: var(--bs-body-bg);
 }
 
 /* style about me  */
 .row {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 /* style bagian projek */
 #projek {
-    background-color: #e2edff;
+  background-color: #e2edff;
 }
 
 .container-fluid {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 /* medsos ig */
 .medsos {
-    font-size: 1.2em;
-    margin-top: 20px;
+  font-size: 1.2em;
+  margin-top: 20px;
 }
 
 /* tombol contak */
 button {
-    background-color: #0e6dfd;
-    color: white;
-    border-radius: 15px;
-    padding: 7px;
+  background-color: #0e6dfd;
+  color: white;
+  border-radius: 15px;
+  padding: 7px;
 }
 
 /* tombol wa */
 #wa {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .tanggal {
-    font-size: small;
+  font-size: small;
 }
 
-
 .tombol-wa {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: rgb(94, 225, 94);
-    font-size: 0.5rem;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    border: 2px solid whitesmoke;
-    color: rgba(32, 30, 27, 0.858);
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: rgb(94, 225, 94);
+  font-size: 0.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  border: 2px solid whitesmoke;
+  color: rgba(32, 30, 27, 0.858);
+}
 
-  .icon-wa{
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-  }
+.icon-wa {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
 
-  /* ini var warna */
-  :root {
-    --primary-color: white;
-    --primary-label: black;
-    --secndary-label: white;
-    --white-ball: white;
-    --black-ball: black;
-  }
+/* ini var warna */
+:root {
+  --primary-color: white;
+  --primary-label: black;
+  --secndary-label: white;
+  --white-ball: white;
+  --black-ball: black;
+}
 
-
-/* ini style tonggler dark or light mode */
+/* ini style tonggler dark or light mode
 
   .btn-dark-mode {
     margin: 0;
@@ -132,4 +130,21 @@ button {
 
   label:active::after {
     width: 50px;
-  }
+  } */
+
+/* .container-mt-5 {
+  margin: 10px;
+} */
+
+/* ini untuk scroll bar */
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+  border: 1px solid rgb(203, 189, 189);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#171010, #FFFFFF);
+  border-radius: 100px;
+  height: 8px;
+}
