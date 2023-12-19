@@ -134,8 +134,20 @@
       }
 
       // MAP -> digunakan untuk menggandakan arry, mengubah/memanipulasi arry
-      const buah = ['apel', 'jeruk', 'nanas'];
-      const Upercase = buah.map()
+      const buah = ["apel", "jeruk", "nanas"];
+      const Upercase = buah.map(function (kata) {
+        return kata.toUpperCase();
+      });
+      console.log(Upercase);
+
+      // contoh penggunaan 
+      let student = [
+        {name: 'Yusuf', age: 12},
+        {name: 'Yusuf', age: 20},
+        {name: 'Yusuf', age: 11}
+      ];
+      const p = student.map((student) => `${student.name} berusia ${student.age}`);
+      console.log(p);
     </script>
   </body>
 </html>
