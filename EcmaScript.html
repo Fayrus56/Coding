@@ -6,6 +6,12 @@
     <title>Document</title>
   </head>
   <body>
+    <h2>Hasilnya adalah</h2>
+    <p class="hasilN"></p>
+    <p class="hasilN"></p>
+    <p class="hasilN"></p>
+    <p id="hasil"></p>
+
     <script>
       // ecma script = dasar dalam mengimplementasikan js
       // arrow function -> memberi kemudahan dalam penulisan function
@@ -99,22 +105,37 @@
       ];
       const siapaYgRemidi = remidi.filter((remidi) => remidi.nilai < 74);
       // alert("Ini siswa yang remidi" + siapaYgRemidi.toString);
-      console.log('Ini siswa yang remidi' +siapaYgRemidi);
+      console.log("Ini siswa yang remidi" + siapaYgRemidi);
 
-      // contoh ke-2, mengunakan remidi
-      // function chekNilai(nilai) {
-      //   let sudah = confirm("Ingin memasukan nilai?");
-      //   if (sudah == true) {
-      //     let nilai = prompt("masukan nilai");
-      //     let namMurid = prompt("masukan nama");
-      //   } else {
-      //     alert("oke");
-      //   }
-      //   if (nilai <=74) {
-      //     console.log('remidi');
-      //   }
-      //   return nilai;
-      // }; masih salah
+      // HIGH ORDER FUNCTION (HOF)
+      // filter -> memfilter
+      // contoh ke-3, mengunakan remidi
+      var user = confirm("apakah ingin memasukkan nilai?");
+      if (user === true) {
+        let nilai = prompt("masukkan nilai!"); //let nilai menyimpan nilai yang dimasukan user
+        cekNilai(parseInt(nilai)); // Memastikan nilai yang dikirimkan dalam bentuk angka
+      } else {
+        //jika tidak maka ini yang akan dieksekusi
+        alert("makasih");
+      }
+
+      function cekNilai(nilai) {
+        let hasil = nilai; //hasil itu nilai nya akan sama dengan let nilai
+        let hasilElems = document.getElementsByClassName("hasilN"); //ini untuk dom
+
+        // disini mulai perkondisian
+        if (hasil >= 75) {
+          for (let i = 0; i < hasilElems.length; i++) {
+            hasilElems[i].innerHTML = "lulus";
+          }
+        } else {
+          document.getElementById("hasil").innerHTML = "remidi";
+        }
+      }
+
+      // MAP -> digunakan untuk menggandakan arry, mengubah/memanipulasi arry
+      const buah = ['apel', 'jeruk', 'nanas'];
+      const Upercase = buah.map()
     </script>
   </body>
 </html>
