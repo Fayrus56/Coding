@@ -15,18 +15,33 @@
     <!-- NAV START -->
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand">Aritikel KU
-            <img src="logofix (1).png" alt="Artikel KU" width="30" height="24" class="d-inline-block align-text-top">
+        <a class="navbar-brand"
+          >Aritikel KU
+          <img
+            src="logofix (1).png"
+            alt="Artikel KU"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
         </a>
         <form class="d-flex" role="search">
           <input
             class="form-control me-2"
-            type="search"
-            placeholder="Search"
+            type="text"
+            placeholder="Search.."
             aria-label="Search"
+            id="searchInput"
           />
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button
+            class="btn btn-outline-success"
+            type="submit"
+            onclick="MencariText"
+          >
+            Search
+          </button>
         </form>
+        <div id="hasilPencarian"></div>
       </div>
     </nav>
     <!-- nav end -->
@@ -106,6 +121,10 @@
             AI ditengarai akan terus berkembang dan memegang peranan penting
             dalam dunia modern ini.
           </p>
+
+         <!-- ! -->
+         <!-- TODO -->
+         <!-- ? -->
           <p>
             Dalam akhir tulisan ini, terdapat satu hal yang perlu kita pikirkan
             dan pertimbangkan ketika kita berbicara tentang kecerdasan buatan
@@ -123,5 +142,24 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script>
+ //  ! kode ini masih berasalah
+      function MencariText() {
+        const MencariText = document.getElementById('searchInput').value.toLowerCase();
+        const para = document.getElementsByTagName('p');
+        const hasilPencarian = document.getElementById('hasilPencarian');
+        hasilPencarian.innerHTML = '';
+
+     
+        for (let i = 0; i < para.length; i++) {
+          const paraText = para[i].textContent.toLocaleLowerCase();
+          if (paraText.includes(MencariText)) {
+            const penanda = paraText.replace(new RegExp(MencariText, 'gi'), match => `<span class="highlight">${match}</span>`);
+            para[i].innerHTML = penanda;
+            hasilPencarian.appendChild(para[i].cloneNode(true));
+          }
+        }
+      }
+    </script>
   </body>
 </html>
