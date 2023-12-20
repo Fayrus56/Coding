@@ -1,0 +1,3 @@
+Array adalah kumpulan data bisa number, string, atau yang lainnya yang memiliki sebuah index [urutan].
+
+Index dimuali dari 0 
