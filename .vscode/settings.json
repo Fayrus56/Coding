@@ -5,3 +5,16 @@
 
 "cssPeek.supportTags": true,
 "cssPeek.supportTags" : true
+
+
+"better-comments.multilineComments": true,
+"better-comments.highlightPlainText": false,
+"better-comments.tags": [
+    {
+        "tag": "!",
+        "color": "#FF0000", // Ganti dengan kode warna yang diinginkan
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+    },
+    // Tambahkan konfigurasi untuk tag lain jika diperlukan
+]
