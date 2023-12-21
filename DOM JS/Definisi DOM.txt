@@ -1,0 +1,33 @@
+Sumber : W3schools
+
+DOM HTML adalah model objek standar dan antarmuka pemrograman untuk HTML. Ini mendefinisikan:
+
+Elemen HTML sebagai objek
+Properti semua elemen HTML
+Metode untuk mengakses semua elemen HTML
+Peristiwa untuk semua elemen HTML
+Dengan kata lain: DOM HTML adalah standar untuk mendapatkan, mengubah, menambah, atau menghapus elemen HTML.
+
+METHOD DOM 
+getElementById yaitu cara untuk mengakses elemnt html mengunakan 'id'
+
+innerHTML Property -> cara termudah untukmendapatkan konten suatu elemen adalah dengan menggunakan properti innerHTML. 
+Properti innerHTML berguna untuk mendapatkan atau mengganti konten elemen HTML.
+
+Finding HTML Elements (method)
+-document.getElementById(id) -> menemukan elemen berdasarkan id yang diberikan ke tag html.
+-document.getElementsByTagName(name) -> menemukan element berdasarkan tag html
+-document.getElementsByClassName(name)	-> Find elements by class name
+
+Mengubah element html 
+Property :
+    - element.innerHTML =  new html content 
+      KET : Mengubah HTML bagian dalam suatu elemen
+    - element.attribute = new value 
+      ket : mengubah nilai attribute dalam html
+    - element.style.property = new style
+       ket : mengubah style dari element html
+
+METHOD
+    - element.setAttribute(attribute, value) 
+      KET : mengubah nilai attribute dalam html
