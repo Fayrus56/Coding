@@ -10,6 +10,12 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <style>
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <!-- NAV START -->
@@ -25,7 +31,7 @@
             class="d-inline-block align-text-top"
           />
         </a>
-        <form class="d-flex" role="search">
+        <form class="d-flex" role="search" onsubmit="MencariText(event)">
           <input
             class="form-control me-2"
             type="text"
@@ -122,9 +128,9 @@
             dalam dunia modern ini.
           </p>
 
-         <!-- ! -->
-         <!-- TODO -->
-         <!-- ? -->
+          <!-- ! -->
+          <!-- TODO -->
+          <!-- ? -->
           <p>
             Dalam akhir tulisan ini, terdapat satu hal yang perlu kita pikirkan
             dan pertimbangkan ketika kita berbicara tentang kecerdasan buatan
@@ -143,20 +149,26 @@
       crossorigin="anonymous"
     ></script>
     <script>
- //  ! kode ini masih berasalah
-      function MencariText() {
-        const MencariText = document.getElementById('searchInput').value.toLowerCase();
-        const para = document.getElementsByTagName('p');
-        const hasilPencarian = document.getElementById('hasilPencarian');
-        hasilPencarian.innerHTML = '';
+      function MencariText(event) {
+        event.preventDefault(); // Menghentikan aksi default dari tombol submit
 
-     
+        const MencariText = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const para = document.getElementsByTagName("p");
+        const hasilPencarian = document.getElementById("hasilPencarian");
+        hasilPencarian.innerHTML = "";
+
         for (let i = 0; i < para.length; i++) {
-          const paraText = para[i].textContent.toLocaleLowerCase();
+          const paraText = para[i].textContent.toLowerCase();
           if (paraText.includes(MencariText)) {
-            const penanda = paraText.replace(new RegExp(MencariText, 'gi'), match => `<span class="highlight">${match}</span>`);
-            para[i].innerHTML = penanda;
-            hasilPencarian.appendChild(para[i].cloneNode(true));
+            const penanda = paraText.replace(
+              new RegExp(MencariText, "gi"),
+              (match) => `<span class="highlight">${match}</span>`
+            );
+            const clonedPara = para[i].cloneNode(true);
+            clonedPara.innerHTML = penanda; // Mengubah salinan paragraf, bukan paragraf asli
+            hasilPencarian.appendChild(clonedPara);
           }
         }
       }
