@@ -43,4 +43,14 @@ btn2.style.background = "blue";
 btn2.style.color = "white";
 btn2.style.fontSize = "15px";
 
-// ! element2 dom js
+// TODO: menambah dan menghapus element html
+document.body.onload = menambahkanElement; //* ini akan menjalankan function menambahakanElement ketika halaman memuat(loading)
+function menambahakanElement() {
+    const newDiv = document.createElement('div');
+    const newContent = document.createTextNode('ini adalah contoh cara membuat element baru');
+    newDiv.appendChild(newContent);
+    const currentDiv = document.getElementById('contoh');
+    document.body.insertBefore(newDiv, currentDiv)
+  }
+  menambahakanElement()
+
