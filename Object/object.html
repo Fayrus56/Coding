@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Object in JS</title>
-</head>
-<body>
-    
-
-
-
+  </head>
+  <body>
     <script>
-        // membuat object di js, ini object literal
-        // metode ini memang mudah tetapi memiliki kekurangan yaitu jika object memiliki properti yang sama tetapi ingin value yg berbeda harus menuliskannya ulang
-        let siswa = {
-            nama: 'joni',
-            kelas: '2 SD',
-        }
-        let siswa2= {
-            nama: 'JOno',
-            kelas: '5 SD',
-        }
+      // membuat object di js, ini object literal
+      // metode ini memang mudah tetapi memiliki kekurangan yaitu jika object memiliki properti yang sama tetapi ingin value yg berbeda harus menuliskannya ulang
+      let siswa = {
+        nama: "joni",
+        kelas: "2 SD",
+      };
+      let siswa2 = {
+        nama: "JOno",
+        kelas: "5 SD",
+      };
 
-        // membuat object menggunkan functional declaration
+      // membuat object menggunkan functional declaration
 
-        function siswa(nama,kelas) {
-            let x = {};
-            x.nama = nama
-            x.kelas = kelas
-            return x 
-        }
+      function membuatObojctSiswa(nama, kelas) {
+        let x = {};
+        x.nama = nama;
+        x.kelas = kelas;
+        return x;
+      }
+      // untuk memnanggil bisa dengan cara berikut
+      let siswa3 = membuatObojctSiswa("Joyo", "4 SD");
 
-        
+      //membuat menggunakan constractor
+      function ObjectSiswa2(nama, kelas) {
+        // ler this = {} ini tidak perlu karna sdh menggunakan this, dan ini yang membedakan antara function declaration dgn constractor
+        this.nama = nama
+        this.kelas = kelas
+      }
 
-
-
+      let siswa4 = new ObjectSiswa2('Yono', '3 SD');
     </script>
-</body>
+  </body>
 </html>
