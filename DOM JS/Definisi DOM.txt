@@ -31,3 +31,23 @@ Property :
 METHOD
     - element.setAttribute(attribute, value) 
       KET : mengubah nilai attribute dalam html
+
+
+MENAMBHAKAN DAN MENGHAPUS Elements
+Method	
+document.createElement(element) ->	Create an HTML element
+document.removeChild(element) ->	Remove an HTML element
+document.appendChild(element)	-> Add an HTML element
+document.replaceChild(new, old)	-> Replace an HTML element
+document.write(text) -> Write into the HTML output stream
+
+Adding Events Handlers
+document.getElementById(id).onclick = function(){code} -> MENAMBHAKAN event ketiks diklik
+
+
+addEventListener()
+SYNTAX 
+element.addEventListener(event, function, useCapture)
+Events itu bisa berisi click, mouseover, keypress
+
+addEventListener juga bisa digunakan untuk elemen html, dok html, window object.

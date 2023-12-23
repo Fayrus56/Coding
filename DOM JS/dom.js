@@ -36,21 +36,59 @@ const btn2 = document.getElementById("btn2"); //ini untuk menghubungkan k id btn
 const btn1 = document.querySelector(".btn2"); //ini untuk menghubungkan k id btn1 di html (. untuk class)(#untuk id)
 
 //*ini untuk style halaman html
-btn1.style.fontSize = "15px";
-btn1.style.background = "blue";
-btn1.style.color = "white";
-btn2.style.background = "blue";
-btn2.style.color = "white";
-btn2.style.fontSize = "15px";
+// btn1.style.fontSize = "15px";
+// btn1.style.background = "blue";
+// btn1.style.color = "white";
+// btn2.style.background = "blue";
+// btn2.style.color = "white";
+// btn2.style.fontSize = "15px";
+
+//* INI CARA YANG LEBIH BAIK
+document.getElementById("btn1").style.backgroundColor = "red";
 
 // TODO: menambah dan menghapus element html
-document.body.onload = menambahkanElement; //* ini akan menjalankan function menambahakanElement ketika halaman memuat(loading)
-function menambahakanElement() {
-    const newDiv = document.createElement('div');
-    const newContent = document.createTextNode('ini adalah contoh cara membuat element baru');
-    newDiv.appendChild(newContent);
-    const currentDiv = document.getElementById('contoh');
-    document.body.insertBefore(newDiv, currentDiv)
-  }
-  menambahakanElement()
+function addElement() {
+  const newDiv = document.createElement("div");
+  const newContent = document.createTextNode(
+    "ini adalah contoh cara membuat element baru"
+  );
+  newDiv.appendChild(newContent);
+  const currentDiv = document.getElementById("contoh");
+  document.body.insertBefore(newDiv, currentDiv);
+}
+addElement();
 
+// TODO: penggunaan addEventListerner
+document.getElementById("tryIt").addEventListener("click", whenClick);
+function whenClick() {
+  var paraElement = document.querySelector(".para");
+  paraElement.innerHTML = "ini hasil addEventListener";
+}
+
+//* addEventListener bisa menajalankan dua function, dan kedua function tersebut bisa berjalan bersaman contoh
+let f = document.getElementById("tryIt2");
+f.addEventListener("click", function1);
+f.addEventListener("click", function2);
+
+function function1() {
+  alert("booooom");
+}
+function function2() {
+  console.log("🚀 ~ file: dom.js:79 ~ function2 ~ hello:", "hello");
+}
+
+//* addEventListener jg bisa handler window object
+window.addEventListener("resize", function mengubahUK() {
+  document.getElementById("demo").innerHTML = Math.random();
+});
+
+// TODO: jika ingn mengirim 2 paramenter lewat addEventListener
+let p1 = 6;
+let p2 = 5;
+document.getElementById("hasil").addEventListener("click", function () {
+  myFunction(p1, p2);
+});
+
+function myFunction(a, b) {
+  document.getElementById("demo2").innerHTML = a * b;
+}
