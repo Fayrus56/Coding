@@ -1,3 +1,28 @@
 19/12/2023
 
 folder ini dibuat untuk tempat menyimpan file web yang akan aku buat disini web yang berisi artikel yang dibuat dari copy.ia yang akan memiliki fitur search yang sederhana
+
+penjelasan kode :
+Mendapatkan Input Pencarian: Kode pertama mendapatkan kotak input yang digunakan pengguna untuk melakukan pencarian dan juga semua elemen paragraf dari halaman web.
+
+Menambahkan Listener Pencarian: Saat pengguna mengetik sesuatu dalam kotak pencarian, kode akan memanggil fungsi filterData dengan kata kunci pencarian yang dimasukkan.
+
+Fungsi FilterData: Fungsi filterData ini melakukan hal berikut untuk setiap paragraf:
+
+Mengambil teks dari setiap paragraf.
+Mengubah teks dan pencarian menjadi huruf kecil agar pencarian tidak bersifat case-sensitive (tidak memperhatikan huruf besar/kecil).
+Jika teks paragraf mengandung kata kunci pencarian, maka kata kunci tersebut akan disorot di dalam teks paragraf dengan warna latar belakang kuning.
+Kemudian, teks yang disorot akan dimasukkan kembali ke dalam elemen HTML paragraf.
+Paragraf yang mengandung kata kunci pencarian akan ditampilkan, sedangkan yang tidak akan disembunyikan.
+
+Pada potongan kode JavaScript yang digunakan untuk melakukan pencarian dan penyorotan teks, terdapat penggunaan new RegExp(search, "gi") dan match.
+
+new RegExp(search, "gi"): Ini adalah cara untuk membuat objek RegExp di JavaScript. RegExp adalah singkatan dari "regular expression" yang digunakan untuk mencocokkan pola dalam teks. Parameter pertama yang diberikan (search) adalah pola yang ingin dicocokkan. Parameter kedua ("gi") adalah opsi atau flags yang diterapkan pada pencarian:
+"g" (global) digunakan agar pencarian tidak berhenti setelah menemukan satu kecocokan. Ini akan mencari semua kecocokan dalam teks.
+"i" (case-insensitive) digunakan agar pencarian tidak memperhatikan perbedaan huruf besar/kecil.
+Dengan menggunakan new RegExp(search, "gi"), kita membuat pola pencarian yang akan digunakan untuk mencari semua kecocokan dalam teks secara global dan tanpa memperdulikan perbedaan huruf besar/kecil.
+
+match: Ini adalah argumen yang digunakan dalam fungsi callback pada fungsi replace yang digunakan di dalam kode. match adalah hasil kecocokan dari pola pencarian (search) dalam teks. Pada titik di mana pola ditemukan, match akan berisi kata kunci pencarian yang sesuai.
+Dalam kode tersebut, match digunakan untuk mengidentifikasi kecocokan dari kata kunci pencarian dalam teks dan menyorotnya dengan menambahkan tag <span class="highlight">...</span> di sekitar kecocokan tersebut.
+
+Jadi, new RegExp(search, "gi") digunakan untuk membuat pola pencarian yang global dan tidak case-sensitive, sementara match adalah hasil dari pencarian yang akan digunakan untuk menyorot teks yang sesuai dengan kata kunci pencarian.

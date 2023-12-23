@@ -33,19 +33,12 @@
         </a>
         <form class="d-flex" role="search" onsubmit="MencariText(event)">
           <input
-            class="form-control me-2"
+            class="form-control me-5"
             type="text"
-            placeholder="Search.."
+            placeholder="Cari..."
             aria-label="Search"
             id="searchInput"
           />
-          <button
-            class="btn btn-outline-success"
-            type="submit"
-            onclick="MencariText"
-          >
-            Search
-          </button>
         </form>
         <div id="hasilPencarian"></div>
       </div>
@@ -56,7 +49,7 @@
       <main>
         <h1>Kehebatan AI</h1>
         <article>
-          <p>
+          <p class="para">
             Artificial Intelligence (AI) atau kecerdasan buatan merupakan hal
             yang sudah tidak asing lagi di telinga kita. Teknologi ini memiliki
             kekuatan untuk mengubah dunia dalam berbagai aspek seperti perawatan
@@ -69,7 +62,7 @@
             deep learning.
           </p>
 
-          <p>
+          <p class="para">
             1. Machine Learning Machine Learning (ML) adalah teknik dalam
             pengembangan AI yang memungkinkan mesin untuk belajar dari data yang
             diberikan tanpa harus diprogram dengan setiap kemungkinan dari data
@@ -82,12 +75,12 @@
             tinggi.
           </p>
 
-          <p>
+          <p class="para">
             2. Deep Learning Deep Learning (DL) merupakan sebuah teknik khusus
             dalam machine learning yang digunakan untuk memodelkan data yang
             sangat kompleks seperti suara atau gambar.
           </p>
-          <p>
+          <p class="para">
             Ini dilakukan dengan mengunakan Neural Networks. Neural Networks
             dalam Deep Learning terinspirasi dari cara kerja otak manusia dalam
             memproses informasi. Neural Networks didesain untuk belajar dari
@@ -112,7 +105,7 @@
             reliabel.
           </p>
 
-          <p>
+          <p class="para">
             Data akan menjadi informasi yang benar-benar akurat dan
             representatif bila ia tergolong big data, yaitu data yang tergolong
             representatif, bersih, tidak bertentangan, dan begitu banyak.
@@ -131,6 +124,7 @@
           <!-- ! -->
           <!-- TODO -->
           <!-- ? -->
+          <!-- * -->
           <p>
             Dalam akhir tulisan ini, terdapat satu hal yang perlu kita pikirkan
             dan pertimbangkan ketika kita berbicara tentang kecerdasan buatan
@@ -149,29 +143,50 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      function MencariText(event) {
-        event.preventDefault(); // Menghentikan aksi default dari tombol submit
+      // Mendapatkan elemen input pencarian
+      const search = document.getElementById("searchInput");
+      // mendapatkan element paragraf
+      const items = document.querySelectorAll("p");
+      // Menambahkan event listener saat pengguna mengetikkan sesuatu di kotak pencarian
+      search.addEventListener("input", (e) => filterData(e.target.value)); // ketika user mengetikkan sesuatu, akan ini akan terisi dgn yg diketikkan tersenut
 
-        const MencariText = document
-          .getElementById("searchInput")
-          .value.toLowerCase();
-        const para = document.getElementsByTagName("p");
-        const hasilPencarian = document.getElementById("hasilPencarian");
-        hasilPencarian.innerHTML = "";
+      // Fungsi untuk melakukan pencarian dan penyorotan teks
+      function filterData(search) {
+        items.forEach((item) => {
+          const text = item.innerText; // Mendapatkan teks dari setiap paragraf
+          const lowerCaseText = text.toLowerCase(); // Mendapatkan teks dari setiap paragraf
+          const lowerCaseSearch = search.toLowerCase();  // Mengubah pencarian menjadi huruf kecil
 
-        for (let i = 0; i < para.length; i++) {
-          const paraText = para[i].textContent.toLowerCase();
-          if (paraText.includes(MencariText)) {
-            const penanda = paraText.replace(
-              new RegExp(MencariText, "gi"),
-              (match) => `<span class="highlight">${match}</span>`
+           // Memeriksa apakah teks paragraf mengandung kata kunci pencarian
+          if (lowerCaseText.includes(lowerCaseSearch)) {  // Jika ada, kita akan menyorot kata kunci tersebut di dalam teks
+            // Membuat teks yang cocok menjadi teks yang disorot
+            const highlightedText = text.replace(
+              new RegExp(search, "gi"), // Mencari kata kunci pencarian dalam teks
+              (match) => `<span class="highlight">${match}</span>` // Menyisipkan teks yang disorot
             );
-            const clonedPara = para[i].cloneNode(true);
-            clonedPara.innerHTML = penanda; // Mengubah salinan paragraf, bukan paragraf asli
-            hasilPencarian.appendChild(clonedPara);
+            // Memasukkan kembali teks yang disorot ke dalam elemen HTML paragraf
+            item.innerHTML = highlightedText; // Menyisipkan teks yang disorot kembali ke elemen HTML
+           // Menampilkan paragraf yang mengandung kata kunci pencarian
+            item.classList.remove("d-none");
+          } else {
+            // Menyembunyikan paragraf yang tidak mengandung kata kunci pencarian
+            item.classList.add("d-none"); //d-none itu fungsi dr boostrap
           }
-        }
+        });
       }
+
+      // yang ini tanpa heighleter
+      // function filterData(search) {
+      //   items.forEach((item) => {
+      //     if (item.innerText.toLowerCase().includes(search.toLowerCase())) {
+      //       item.classList.remove("d-none");
+      //     } else {
+      //       item.classList.add("d-none");
+      //     }
+      //   });
+      // }
+
+      // 4. includes() Metode ini berfungsi untuk mengecek apakah pada elemen array memenuhi suatu kondisi atau tidak
     </script>
   </body>
 </html>
