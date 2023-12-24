@@ -3,74 +3,132 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Array iteration</title>
   </head>
   <body>
     <p id="demo"></p>
+    <script type="module" src="regex.js"></script>
     <script>
-      let a = "visit myWebPorto";
-      let b = a.search(/myWebporto/i); // penambahan /i/ supaya menjadi tdk peka hurf besar kecil
-      console.log(b);
+      // Metode forEach() memanggil sebuah fungsi (fungsi callback) satu kali untuk setiap elemen larik.
+      // Perhatikan bahwa fungsi ini membutuhkan 3 argumen:
+      // -Nilai/VALUE item
+      // -Indeks item
+      // -Larik itu sendiri, contoh:
+      const number2 = [45, 4, 9, 16, 25];
+      number2.forEach(myFunction); //ini memanggil function bernama myFunction
+      // ini function yang akann dijalankan
+      function myFunction(value, index, array) {
+        txt = +value;
+        console.log("ini forEach " + array);
+      }
+      // contoh penggunaan forEach
+      // let angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // angka.forEach(function (e) {
+      //   console.log(e);
+      // });
 
-      // cara mencari suatu huruf/kata dari sebuah array
-      let nbv = /my/i; // ini akan mencari kata 'my'
-      let vcc = "My WEB PORTOVOLIO";
-      // console.log(nbv.test(vcc));
-      let vc = nbv.test(vcc);
-      console.log(vc);
-
-      //   fungsi callback -> menampilkan semuanya
-      const arrsy = [1, 2, 3, 4];
-      arrsy.forEach(function (element) {
-        //ini bisa untuk memanggil function
-        console.log(element);
-      });
-
-      // contoh penggunaan
-      let angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-      angka.forEach(function (e) {
-        console.log(e);
-      });
-
-      //   menggunakan parameter thisArg
-      const obk = {
-        name: "Yusuf",
-        age: 14,
-      };
-      const ary = [1, 2, 3];
-      ary.forEach(function (element) {
-        console.log(element + this.age);
-      });
-
+      // MAP -> Ini berfungsi untuk melakukan perulangan function di setiap array
+      const angka = [1, 42, 50, 65, 5, 60, 100];
+      const angka2 = angka.map(perkalian);
+      function perkalian(value, index, array) {
+        return value * 2;
+      }
+      console.log(
+        "🚀 ~ file: Array-Iteration and Regex.html:32 ~ angka2:",
+        angka2
+      );
       // map -> mengembailakn nilai
       const numbers = [65, 44, 12, 4];
       const newArr = numbers.map(myFunction);
 
-      document.getElementById("demo").innerHTML = newArr;
+      document.getElementById("demo").innerHTML = "ini method map " + newArr;
 
       function myFunction(num) {
-        return num * 10;
+        return num * 10; //setiap value dari arry akan dikalikan satu-satu dengan 10
       }
 
-      // filter -> mencari nilai dari sebuah array, dan mengembalikan dalam bentuk array juga
+      // filter
+      // filter -> mencari nilai dari sebuah array, lalu mengetesnya dan jika lolos akan mengembalikan dalam bentuk array juga
       let q = [1, 2, 3, 5, 7, 8, 20, 19, 15, 12];
       let r = q.filter(function (c) {
         return c === 5;
       });
-      console.log(r.toString()); //disini array diubah menjadi string
+      console.log(
+        "🚀 ~ file: Array-Iteration and Regex.html:55 ini pake filter ",
+        r.toString
+      ); //disini array diubah menjadi string
       // misal jk nilai yang dicari adalah lebih dr 5
       let w = [1, 2, 3, 5, 7, 8, 20, 19, 15, 12];
       let e = w.filter(function (c) {
         return c >= 5;
       });
-      console.log(e.toString(),);
+      console.log(e.toString());
 
-      // find -> menacari 1 niali
+      // every() -> melakuan pengcekan apakah samua nilai arry lulus tes
+      // some() -> melakuan pengcekan apakah beberapa niali lulus tes
+      // semuanya akan mengembalikan dengan bolean true or false
+      //ini contoh penggunaan every dgn hasil true
+      let i = [2, 4, 6, 8];
+      let uy = i.every(allLess10);
+      function allLess10(value) {
+        return value <= 10;
+      }
+      console.log(
+        "🚀 ~ file: Array-Iteration and Regex.html:70 ~ uy: every hasilnya adalah:",
+        uy
+      );
+      let ii = [2, 4, 6, 11];
+      let uyy = ii.every(AllLess10);
+      function AllLess10(value) {
+        return value <= 10;
+      }
+      console.log(
+        "🚀 ~ file: Array-Iteration and Regex.html:70 ~ : every hasilnya adalah:",
+        uyy
+      );
+      // ini contoh penggunaan some dgn hasil true
+      let umur = [20, 30, 2, 16];
+      let cekU = umur.some(cekUmur);
+      console.log("🚀 ~ file: Array-Iteration and Regex.html:92 ~ Hasil cekUmur:", cekU)
+      function cekUmur(value) {
+        return value >= 29
+      }
+      // ini contoh penggunaan some dgn hasil true
+      let umur2 = [20, 30, 2, 16];
+      let cekU2 = umur2.some(cekUmur2);
+      console.log("🚀 ~ file: Array-Iteration and Regex.html:92 ~ Hasil cekUmur kedua:", cekU2)
+      function cekUmur2(value) {
+        return value == 29
+      }
+
+      // find -> find hanya mengembalikan 1 nilai saja, find akan melakukan pengecekan mulai dari depan.
       let t = [1, 2, 3, 5, 7, 8, 20, 19, 15, 12];
       let f = t.find(function (c) {
-        return c >= 5;
+        return c >= 5; //akan mengembalikan nilai 5 karna 5 adalah nilai pertama yg benar
       });
-      console.log(f.toString(),);
+      console.log("🚀 ~ file: Array-Iteration and Regex.html:109 ~ hasil find:", f)
+     
+      // let a = "visit myWebPorto";
+      // let b = a.search(/myWebporto/i); // penambahan /i/ supaya menjadi tdk peka hurf besar kecil
+      // console.log(b);
+
+      // // cara mencari suatu huruf/kata dari sebuah array
+      // let nbv = /my/i; // ini akan mencari kata 'my'
+      // let vcc = "My WEB PORTOVOLIO";
+      // // console.log(nbv.test(vcc));
+      // let vc = nbv.test(vcc);
+      // console.log(vc);
+
+      // //   menggunakan parameter thisArg
+      // const obk = {
+      //   name: "Yusuf",
+      //   age: 14,
+      // };
+      // const ary = [1, 2, 3];
+      // ary.forEach(function (element) {
+      //   console.log(element + this.age);
+      // });
+
     </script>
   </body>
 </html>

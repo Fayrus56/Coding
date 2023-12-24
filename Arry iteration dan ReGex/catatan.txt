@@ -1,0 +1,8 @@
+CATATAN PENTING 
+-ARRY ITU DISEBUT JG LARIK
+-ITERATION/ITERASI = PERULANGAN
+
+MAP
+Metode map() membuat larik baru dengan menjalankan sebuah fungsi pada setiap elemen larik.
+Metode map() tidak menjalankan fungsi untuk elemen larik yang tidak memiliki nilai.
+Metode map() tidak mengubah larik asli.
