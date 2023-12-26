@@ -5,4 +5,20 @@ CATATAN PENTING
 MAP
 Metode map() membuat larik baru dengan menjalankan sebuah fungsi pada setiap elemen larik.
 Metode map() tidak menjalankan fungsi untuk elemen larik yang tidak memiliki nilai.
+
 Metode map() tidak mengubah larik asli.
+
+rgex modifier -> dilakuukan untuk melakukan penarian gloabl yang lebih peka huruff besar kecil
+i = Lakukan pencocokan peka huruf besar-kecil
+g = Lakukan pencocokan global (temukan semua)
+m = Melakukan pencocokan multiline
+d = Melakukan pencocokan awal dan akhir 
+
+
+
+
+
+
+
+
+
