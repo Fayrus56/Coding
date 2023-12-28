@@ -12,7 +12,9 @@ rgex modifier -> dilakuukan untuk melakukan penarian gloabl yang lebih peka huru
 i = Lakukan pencocokan peka huruf besar-kecil
 g = Lakukan pencocokan global (temukan semua)
 m = Melakukan pencocokan multiline
-d = Melakukan pencocokan awal dan akhir 
+d = Melakukan pencocokan awal dan akhir
+
+https://www.w3schools.com/js/js_regexp.asp
 
 
 

@@ -21,12 +21,23 @@ let text2 = "\nDimana \nsaya???"; // ! /n -> baris baru
 let result2 = text2.match(/^saya/m); //m ->bisa melakukan pencarian baris baru
 document.getElementById("demo3").innerHTML = "Result is: " + result2;
 
-//* menggunakan parameter thisArg
-// const obk = {
-//   name: "Yusuf",
-//   age: 14,
-// };
-// const ary = [1, 2, 3];
-// ary.forEach(function (element) {
-//   console.log(element + this.age);
-// });
+//* method test -> meencari pola(pettern) dari sebuah string  ini akan megngembalikan niali bolean
+const pattern = /e/;
+let y = pattern.test("The best things in life are free!");
+console.log("🚀 ~ file: regex.js:27 ~ hsil dari tetss:", y)
+
+// TODO: conttoh penggunaan regex dggn method test -> untuk melakukan peengecekan dengan pola tertenti
+let pola = /(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d!@#$%^&*()-=_+]{8,}/g
+let t = 'Psdsjkdnfk123#23';
+console.log("🚀 ~ file: regex.js:31 ~ pola:", pola.test(t))
+
+
+//* menggunakan parameter thisArg di objct
+const obk = {
+  name: "Yusuf",
+  age: 14,
+};
+const ary = [1, 2, 3];
+ary.forEach(function (element) {
+  console.log(element + this.age);
+});
