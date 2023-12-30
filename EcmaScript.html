@@ -66,7 +66,7 @@
         c: 5,
       };
       for (const key in obj) {
-        console.log(`${key} => ${obj[key]}`);
+        console.log(`ini hasilnya : ${key} => ${obj[key]}`);
       }
       //  jika for in diguunakan di array
       const a = [1, 2, 3, 4];
@@ -133,7 +133,6 @@
         }
       }
 
-      
       // MAP -> digunakan untuk menggandakan arry, mengubah/memanipulasi arry
       const buah = ["apel", "jeruk", "nanas"];
       const Upercase = buah.map(function (kata) {
@@ -141,13 +140,15 @@
       });
       console.log(Upercase);
 
-      // contoh penggunaan 
+      // contoh penggunaan
       let student = [
-        {name: 'Yusuf', age: 12},
-        {name: 'Yusuf', age: 20},
-        {name: 'Yusuf', age: 11}
+        { name: "Yusuf", age: 12 },
+        { name: "Yusuf", age: 20 },
+        { name: "Yusuf", age: 11 },
       ];
-      const p = student.map((student) => `${student.name} berusia ${student.age}`);
+      const p = student.map(
+        (student) => `${student.name} berusia ${student.age}`
+      );
       console.log(p);
     </script>
   </body>
