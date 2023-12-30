@@ -85,29 +85,21 @@
       // totPenjumlahan(12)
       console.log(totPenjumlahan(10)); // jika bukan functional mk, nilai dpt diubah dgn mudah.
 
-      // contoh penggunaan functional progamming filter -> untuk memfilter/mendapatkan nilai dr arry
-      const murid = [
-        { name: "Yusuf", umur: 15 },
-        { name: "Yusuf", umur: 10 },
-        { name: "Yusuf", umur: 11 },
-        { name: "Yusuf", umur: 17 },
-        { name: "Yusuf", umur: 21 },
-        { name: "Yusuf", umur: 18 },
-      ];
-      const output = murid.filter((murid) => murid.umur > 14); // disini akan mencari muruid yg umr-nya lebih dr 14
-      console.log(output);
-      // contoh ke-2, mengunakan remidi
-      const remidi = [
-        { nama: "budi", nilai: 90 },
-        { nama: "budi", nilai: 70 },
-        { nama: "jono", nilai: 20 },
-        { nama: "boy", nilai: 93 },
-      ];
-      const siapaYgRemidi = remidi.filter((remidi) => remidi.nilai < 74);
-      // alert("Ini siswa yang remidi" + siapaYgRemidi.toString);
-      console.log("Ini siswa yang remidi" + siapaYgRemidi);
+      // Berikut adalah beberapa contoh penggunaan Functional Programming pada JavaScript:
+      // - immutabillity =  Data pada program tidak dapat diubah setelah dibuat. Sebaliknya, data baru harus dibuat setiap kali ada perubahan pada data.
+      let arr1 = [1, 2, 3];
+      let arr2 = [...arr1, 4];
+      console.log(arr2);
 
+      // -Pure Function: Fungsi yang tidak memiliki efek samping dan selalu mengembalikan nilai yang sama jika diberikan input yang sama.
+      function tambahkan(x, y) {
+        return x * y;
+      }
+      console.log(tambahkan(12, 2));
+
+      // -Higher-Order Function: Fungsi yang dapat menerima fungsi lain sebagai parameter atau mengembalikan fungsi sebagai nilai kembali.
       // HIGH ORDER FUNCTION (HOF)
+
       // filter -> memfilter
       // contoh ke-3, mengunakan remidi
       var user = confirm("apakah ingin memasukkan nilai?");
@@ -150,6 +142,50 @@
         (student) => `${student.name} berusia ${student.age}`
       );
       console.log(p);
+
+      // -reduce -> hampir sama seperti map hanya saja reduce dapat mengubah arry dalam bentuk apapun
+      // SAYA BELUM PAHAM DISINI
+
+      // -Recursion: Teknik pemrograman di mana sebuah fungsi memanggil dirinya sendiri untuk menyelesaikan tugas. 
+      // DAN INI JG SAYA BELUM TERLALU PAHAM
+      function faktorial(n) {
+        if (n === 0) {
+          return 1;
+        } else {
+          return n * faktorial(n - 1);
+        }
+      }
+      console.log("🚀 ~ file: EcmaScript.html:150 ~ faktorial ~ faktorial:", faktorial(12))
+      
+
+      // contoh penggunaan functional progamming filter -> untuk memfilter/mendapatkan nilai dr arry
+      const murid = [
+        { name: "Yusuf", umur: 15 },
+        { name: "Yusuf", umur: 10 },
+        { name: "Yusuf", umur: 11 },
+        { name: "Yusuf", umur: 17 },
+        { name: "Yusuf", umur: 21 },
+        { name: "Yusuf", umur: 18 },
+      ];
+      const output = murid.filter((murid) => murid.umur > 14); // disini akan mencari muruid yg umr-nya lebih dr 14
+      console.log(output);
+      // contoh ke-2, mengunakan remidi
+      const remidi = [
+        { nama: "budi", nilai: 90 },
+        { nama: "budi", nilai: 70 },
+        { nama: "jono", nilai: 20 },
+        { nama: "boy", nilai: 93 },
+      ];
+      const siapaYgRemidi = remidi.filter((remidi) => remidi.nilai < 74);
+      // alert("Ini siswa yang remidi" + siapaYgRemidi.toString);
+      console.log("Ini siswa yang remidi" + siapaYgRemidi);
+
+      // Destructuring Assignment -> adalah sebuah sintaks spesial pada JavaScript yang memungkinkan kita untuk “membongkar” array atau objek menjadi variabel yang banyak.
+      let namam = {yusuf, fayrus}
+      let {firstName, lastName} = namam;
+      console.log("🚀 ~ file: EcmaScript.html:186 ~ lastName:", lastName)
+      console.log("🚀 ~ file: EcmaScript.html:186 ~ firstName:", firstName)
+      
     </script>
   </body>
 </html>
