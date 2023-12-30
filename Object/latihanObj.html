@@ -17,7 +17,7 @@
       }
       h1 {
         font-weight: 700;
-        color:white;
+        color: white;
       }
       .wrapper {
         margin: 10px;
@@ -43,9 +43,6 @@
         justify-content: center;
         align-items: center;
       }
-
-
-
     </style>
   </head>
   <body>
@@ -61,21 +58,34 @@
     </div>
 
     <script>
+      // disini menjadi tempat menyimpan data pengguna
+      let dataUsers = []; 
+
       function simpanData() {
         // mendapatkan nilai dari input
         let nama = document.getElementById("nama").value;
-        let jumlahKas = document.getElementById("jumlah").value;
+        let jumlahKas = parseInt(document.getElementById("jumlah").value); // Menggunakan parseInt untuk mengonversi nilai string ke integer
 
         // objek untuk menyimpan data
-        let userData = {
-          nama: nama,
-          jumlahPembayaran: jumlahKas, // Perbaikan di sini
-        };
+        function DataUser(name, jumlahPembayaran) {
+          this.nama = name;
+          this.jumlahKas = jumlahPembayaran;
+        }
 
-        console.log(userData); // Data ditampilkan di console
+        // Mendapatkan total jumlah dari pengguna-pengguna sebelumnya
+        let totalJumlahSebelumnya = 0;
+        dataUsers.forEach((user) => {
+          totalJumlahSebelumnya += user.jumlahKas;
+        });
 
-        // Jika Anda ingin melakukan operasi lain dengan data user, Anda bisa melakukannya di sini
-        // Contoh: Mengirim data ke server atau melakukan operasi lainnya
+        // Menambahkan jumlah yang baru diinputkan dengan total jumlah dari pengguna sebelumnya
+        let totalJumlahBaru = jumlahKas + totalJumlahSebelumnya;
+
+        let userNew = new DataUser(nama, totalJumlahBaru);
+
+        // Menambahkan data pengguna baru ke dalam array dataUsers
+        dataUsers.push(userNew);
+        console.log(dataUsers); // Data ditampilkan di console
       }
     </script>
   </body>
