@@ -7,7 +7,8 @@
   </head>
   <body>
     <script>
-      // membuat object di js, ini object literal
+      // membuat object di js
+      // 1. menggunakan object literal
       // metode ini memang mudah tetapi memiliki kekurangan yaitu jika object memiliki properti yang sama tetapi ingin value yg berbeda harus menuliskannya ulang
       let siswa = {
         nama: "joni",
@@ -18,8 +19,7 @@
         kelas: "5 SD",
       };
 
-      // membuat object menggunkan functional declaration
-
+      // 2. membuat object menggunkan functional declaration
       function membuatObojctSiswa(nama, kelas) {
         let x = {};
         x.nama = nama;
@@ -29,16 +29,39 @@
       // untuk memnanggil bisa dengan cara berikut
       let siswa3 = membuatObojctSiswa("Joyo", "4 SD");
 
-      //membuat menggunakan constractor
+      // contoh kedua -> kode ini belum efisien, karna setiap menambhakan 1 variabel yang mengisi parameter function akan selalu diulang dan disimpan inii tentu saja tidak efektif 
+      function mobil(namaMbl, energi) {
+        let car = {};
+        car.nama = namaMbl;
+        car.energi = energi;
+        car.berjalan = function (bahanBakar) {
+          this.energi -= bahanBakar;
+          console.log(`Sisa bahan bakar ${this.energi}`);
+        };
+        car.isiBahanBakar = function (jumlahBhnBkr) {
+            this.energi += jumlahBhnBkr;
+            console.log(`Energi bertambah jadi ${this.energi}`);
+        };
+
+        return car;
+      }
+      // memanggil :
+      let mbl1 = mobil("Honda", 145);
+      console.log("🚀 ~ file: object.html:50 ~ mbl1:", mbl1.berjalan(25));
+      console.log("🚀 ~ file: object.html:51 ~ mbl1:", mbl1.isiBahanBakar(10));
+      
+
+      // 3. membuat menggunakan constractor
       function ObjectSiswa2(nama, kelas) {
         // ler this = {} ini tidak perlu karna sdh menggunakan this, dan ini yang membedakan antara function declaration dgn constractor
-        this.nama = nama
-        this.kelas = kelas
+        this.nama = nama;
+        this.kelas = kelas;
       }
 
-      let siswa4 = new ObjectSiswa2('Yono', '3 SD');
+      let siswa4 = new ObjectSiswa2("Yono", "3 SD");
 
- 
+      // 4. menggunakan object.create
+      let namaMobil = {};
     </script>
   </body>
 </html>
