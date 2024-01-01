@@ -29,7 +29,7 @@
       // untuk memnanggil bisa dengan cara berikut
       let siswa3 = membuatObojctSiswa("Joyo", "4 SD");
 
-      // contoh kedua -> kode ini belum efisien, karna setiap menambhakan 1 variabel yang mengisi parameter function akan selalu diulang dan disimpan inii tentu saja tidak efektif 
+      // contoh kedua -> kode ini belum efisien, karna setiap menambhakan 1 variabel yang mengisi parameter function akan selalu diulang dan disimpan inii tentu saja tidak efektif
       function mobil(namaMbl, energi) {
         let car = {};
         car.nama = namaMbl;
@@ -39,8 +39,8 @@
           console.log(`Sisa bahan bakar ${this.energi}`);
         };
         car.isiBahanBakar = function (jumlahBhnBkr) {
-            this.energi += jumlahBhnBkr;
-            console.log(`Energi bertambah jadi ${this.energi}`);
+          this.energi += jumlahBhnBkr;
+          console.log(`Energi bertambah jadi ${this.energi}`);
         };
 
         return car;
@@ -49,7 +49,29 @@
       let mbl1 = mobil("Honda", 145);
       console.log("🚀 ~ file: object.html:50 ~ mbl1:", mbl1.berjalan(25));
       console.log("🚀 ~ file: object.html:51 ~ mbl1:", mbl1.isiBahanBakar(10));
-      
+
+      // 4. menggunakan object.create -> bisa membuat kode diatas lebih efisien
+      const methodTruck = {
+        isiSolar: function (jumlahSolar) {
+          this.tenaga += jumlahSolar;
+          console.log(`Solar bertambah jadi ${this.tenaga}`);
+        },
+        membawaAngkutan: function (jumlahAngkutan) {
+          this.tenaga -= jumlahAngkutan/2;
+          console.log(`Sisa bahan bakar ${this.tenaga}`);
+        },
+      };
+
+      function truck(nama, tenaga) {
+        let truck = Object.create(methodTruck);
+        truck.nama = nama;
+        truck.tenaga = tenaga;
+        // mengembalikan nilai truck(let)
+        return truck
+      }
+      // mengamggil:
+      let trk1 = truck("Fuso", 250);
+      let trk2 = truck("Hino", 400);
 
       // 3. membuat menggunakan constractor
       function ObjectSiswa2(nama, kelas) {
@@ -59,9 +81,6 @@
       }
 
       let siswa4 = new ObjectSiswa2("Yono", "3 SD");
-
-      // 4. menggunakan object.create
-      let namaMobil = {};
     </script>
   </body>
 </html>
