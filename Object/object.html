@@ -18,6 +18,7 @@
         nama: "JOno",
         kelas: "5 SD",
       };
+      // and
 
       // 2. membuat object menggunkan functional declaration
       function membuatObojctSiswa(nama, kelas) {
@@ -49,6 +50,7 @@
       let mbl1 = mobil("Honda", 145);
       console.log("🚀 ~ file: object.html:50 ~ mbl1:", mbl1.berjalan(25));
       console.log("🚀 ~ file: object.html:51 ~ mbl1:", mbl1.isiBahanBakar(10));
+      // functional declaration End
 
       // 4. menggunakan object.create -> bisa membuat kode diatas lebih efisien
       const methodTruck = {
@@ -57,7 +59,7 @@
           console.log(`Solar bertambah jadi ${this.tenaga}`);
         },
         membawaAngkutan: function (jumlahAngkutan) {
-          this.tenaga -= jumlahAngkutan/2;
+          this.tenaga -= jumlahAngkutan / 2;
           console.log(`Sisa bahan bakar ${this.tenaga}`);
         },
       };
@@ -66,12 +68,16 @@
         let truck = Object.create(methodTruck);
         truck.nama = nama;
         truck.tenaga = tenaga;
+        // jiks menggunakan obj.create tidak perlu memanggil method diatas satu-satu
+        // truck.membawaAngkutan = tenaga
+
         // mengembalikan nilai truck(let)
-        return truck
+        return truck;
       }
       // mengamggil:
       let trk1 = truck("Fuso", 250);
       let trk2 = truck("Hino", 400);
+      // obj.crate end
 
       // 3. membuat menggunakan constractor
       function ObjectSiswa2(nama, kelas) {
@@ -81,6 +87,52 @@
       }
 
       let siswa4 = new ObjectSiswa2("Yono", "3 SD");
+      // constraktor end
+
+      // contoh 5 start
+      // 5. penggunaan prototye -> mepermudah dalam pembautan method sepertii dibaris 54
+      function pegawai(namaP, gaji) {
+        this.namaPegawai = namaP;
+        this.gajiP = gaji;
+      }
+      // jiks pegawai lembur
+      pegawai.prototype.lembur = function lembur(jam) {
+        this.gajiP * jam;
+        return `${this.namaPegawai} anda mendapat gaji ${this.gajiP}`;
+      };
+      // jika pegawai telat
+      pegawai.prototype.telat = function telat(menit) {
+        this.gajiP -= menit * 60; //ingat perkailan duluan
+        return `${this.namaPegawai} nada mendapat potongan gaji ${this.gajiP}`;
+      };
+
+      // lalu diisi dengan
+      const pegawai1 = new pegawai("juni", 1000);
+      // 5 end
+
+      // start class
+      // menggunakan class
+      class data {
+        constructor(yourName, umur) {
+          this.namaKamu = yourName;
+          this.umur = umur;
+        }
+        // disini bisa diisi dengan method
+      }
+      let c = new data('jun', 10);
+      console.log("🚀 ~ file: object.html:123 ~ c:", c)
+      // class end
+
+      // Contoh obj menggunakan arrow function
+      const Person = (newName) => {
+        this.name = newName;
+        return {
+          name: this.name,
+        };
+      };
+      const x = Person("Kojek");
+      console.log("🚀 ~ file: object.html:106 ~ Person:", x.name);
+      //  arrow function end
     </script>
   </body>
 </html>
