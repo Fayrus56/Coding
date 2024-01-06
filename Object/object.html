@@ -6,6 +6,7 @@
     <title>Object in JS</title>
   </head>
   <body>
+    <h2>Ini Juga termasuk OOP (object oriented progamming)</h2>
     <script>
       // membuat object di js
       // 1. menggunakan object literal
@@ -119,8 +120,8 @@
         }
         // disini bisa diisi dengan method
       }
-      let c = new data('jun', 10);
-      console.log("🚀 ~ file: object.html:123 ~ c:", c)
+      let c = new data("jun", 10);
+      console.log("🚀 ~ file: object.html:123 ~ c:", c);
       // class end
 
       // Contoh obj menggunakan arrow function
@@ -133,6 +134,74 @@
       const x = Person("Kojek");
       console.log("🚀 ~ file: object.html:106 ~ Person:", x.name);
       //  arrow function end
+
+      // class method start
+      // class method -> berfungsi melakukan operasi pada obj yang dibuat class constraktor tersebut
+
+      // static method START
+      // Static method dalam JavaScript adalah jenis fungsi yang terkait dengan class, bukan dengan instance atau objek yang dibuat dari class tersebut. Method ini dapat dipanggil langsung dari class tanpa perlu membuat objek terlebih dahulu.
+      // contoh
+      class LuasPersegiPanjang {
+        constructor(panjang, lebar) {
+          this.panjang = panjang;
+          this.lebar = lebar;
+        }
+        // buat static method untuk menghitung luas
+        static menghitungLuas(luasPersegiPanjang) {
+          return luasPersegiPanjang.panjang * luasPersegiPanjang.lebar;
+        }
+      }
+      // Membuat objek dari class LuasPersegiPanjang
+      const persegiPanjang = new LuasPersegiPanjang(5, 10);
+
+      // Memanggil static method untuk menghitung luas
+      console.log(
+        "ini hasil luas persegi panjang " +
+          LuasPersegiPanjang.menghitungLuas(persegiPanjang)
+      );
+      // static method END
+
+      // GETTER START
+      // getter -> menapatkan nilai variable didalam sebuah class
+
+      class orang {
+        constructor(newN, newU, gender) {
+          this.nama = newN;
+          this.umur = newU;
+          this.gender = gender;
+        }
+        get getNama() {
+          return (
+            (this.gender === "L" ? "Halo Tuan " : "Halo Nyonya ") + this.nama
+          );
+        }
+      }
+      const orang1 = new orang("Yusuf", 15, "L");
+      console.log("🚀 ~ file: object.html:178 ~ orang1:", orang1.getNama);
+      // GETTER END
+
+      // SETTER START
+      // SETTER -> mengubah nilai varaible dalam sebuah class
+      class mobilB {
+        constructor (namaMbl, tenaga) {
+          this.namaMobil = namaMbl
+          this.tenaga = tenaga
+        }
+        get getNamaMbl(){
+          return this.namaMobil
+        }
+
+        set setNama (namaBaru) {
+          this.namaMobil = namaBaru //mengatur nama baru
+        }
+      }
+      const chagedName = new mobilB ('Toyota', 145)
+      // untuk mengatur/mengubah nama
+      chagedName.setNama = 'Suzuki'
+      console.log("🚀 ~ file: object.html:199 ~ Ganti Nama:", chagedName.getNamaMbl)
+      // SETTER END
+
+      // class method end
     </script>
   </body>
 </html>
