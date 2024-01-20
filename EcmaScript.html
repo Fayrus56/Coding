@@ -11,7 +11,8 @@
     <p class="hasilN"></p>
     <p class="hasilN"></p>
     <p id="hasil"></p>
-
+    <!-- TODO INI LANJUTAN PART 2 -->
+    <script src="highOrderFunction.js"></script>
     <script>
       // ecma script = dasar dalam mengimplementasikan js
       // arrow function -> memberi kemudahan dalam penulisan function
@@ -132,6 +133,7 @@
       });
       console.log(Upercase);
 
+
       // contoh penggunaan
       let student = [
         { name: "Yusuf", age: 12 },
@@ -143,10 +145,9 @@
       );
       console.log(p);
 
-      // -reduce -> hampir sama seperti map hanya saja reduce dapat mengubah arry dalam bentuk apapun
-      // SAYA BELUM PAHAM DISINI
+      // penjelasan reduce ada di file sebelah
 
-      // -Recursion: Teknik pemrograman di mana sebuah fungsi memanggil dirinya sendiri untuk menyelesaikan tugas. 
+      // -Recursion: Teknik pemrograman di mana sebuah fungsi memanggil dirinya sendiri untuk menyelesaikan tugas.
       // DAN INI JG SAYA BELUM TERLALU PAHAM
       function faktorial(n) {
         if (n === 0) {
@@ -155,10 +156,17 @@
           return n * faktorial(n - 1);
         }
       }
-      console.log("🚀 ~ file: EcmaScript.html:150 ~ faktorial ~ faktorial:", faktorial(12))
-      
+      console.log(
+        "🚀 ~ file: EcmaScript.html:150 ~ faktorial ~ faktorial:",
+        faktorial(12)
+      );
 
+      // FILTER
       // contoh penggunaan functional progamming filter -> untuk memfilter/mendapatkan nilai dr arry
+      const angka2 = [-1, 4, 3, -5, 7, , 10, 9];
+      const newAngka = angka2.filter((a) => a >= 3);
+      console.log("boom ini urutannya", newAngka);
+
       const murid = [
         { name: "Yusuf", umur: 15 },
         { name: "Yusuf", umur: 10 },
@@ -181,11 +189,12 @@
       console.log("Ini siswa yang remidi" + siapaYgRemidi);
 
       // Destructuring Assignment -> adalah sebuah sintaks spesial pada JavaScript yang memungkinkan kita untuk “membongkar” array atau objek menjadi variabel yang banyak.
-      let namam = {yusuf, fayrus}
-      let {firstName, lastName} = namam;
-      console.log("🚀 ~ file: EcmaScript.html:186 ~ lastName:", lastName)
-      console.log("🚀 ~ file: EcmaScript.html:186 ~ firstName:", firstName)
-      
+      let yusuf = []; // seharusnya ini gak usah
+      let fayrus = [];  // seharusnya ini gak usah
+      let namam = { yusuf, fayrus };
+      let { firstName, lastName } = namam;
+      console.log("🚀 ~ file: EcmaScript.html:186 ~ lastName:", lastName);
+      console.log("🚀 ~ file: EcmaScript.html:186 ~ firstName:", firstName);
     </script>
   </body>
 </html>
