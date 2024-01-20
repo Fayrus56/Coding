@@ -183,25 +183,98 @@
       // SETTER START
       // SETTER -> mengubah nilai varaible dalam sebuah class
       class mobilB {
-        constructor (namaMbl, tenaga) {
-          this.namaMobil = namaMbl
-          this.tenaga = tenaga
+        constructor(namaMbl, tenaga) {
+          this.namaMobil = namaMbl;
+          this.tenaga = tenaga;
         }
-        get getNamaMbl(){
-          return this.namaMobil
+        get getNamaMbl() {
+          return this.namaMobil;
         }
 
-        set setNama (namaBaru) {
-          this.namaMobil = namaBaru //mengatur nama baru
+        set setNama(namaBaru) {
+          this.namaMobil = namaBaru; //mengatur nama baru
         }
       }
-      const chagedName = new mobilB ('Toyota', 145)
+      const chagedName = new mobilB("Toyota", 145);
       // untuk mengatur/mengubah nama
-      chagedName.setNama = 'Suzuki'
-      console.log("🚀 ~ file: object.html:199 ~ Ganti Nama:", chagedName.getNamaMbl)
+      chagedName.setNama = "Suzuki";
+      console.log(
+        "🚀 ~ file: object.html:199 ~ Ganti Nama:",
+        chagedName.getNamaMbl
+      );
       // SETTER END
-
       // class method end
+
+      // encapsulation -> menyembuyikan detail implementasi dari obj dan hanya mengekspos antarmuka publik
+      // conoth
+      class Ongkir1 {
+        #pajak; // ini adalah private calss -> tujunannya supaya tidak bisa diubah dengan mudah
+        constructor(berat) {
+          this.#pajak = 1000;
+          this.biaya = this.perhitunganBiayaOngkir(berat);
+        }
+        perhitunganBiayaOngkir(berat) {
+          return berat * 2000; // dimisalkan harga per kilo nya 2k
+        }
+        get totalHarga() {
+          return this.#pajak + this.biaya;
+        }
+      }
+
+      const ongkir = new Ongkir1(12);
+      console.log("total harga:", ongkir.totalHarga);
+      ongkir.pajak = 10000; // nilai dari pajak tidak bisa denga mudah diubah karna mengguanakan private class
+      console.log("total harga:", ongkir.totalHarga);
+      // encapsulation end
+
+      // inheritance/ keturunan ->  memungkinkan sebuah class untuk mewarisi properti dan method yang dimilikinya kepada class lain. Konsep inheritance digunakan untuk memanfaatkan fitur code reuse, yakni menghindari terjadinya duplikasi kode program.
+      // dapat dilakukan dengan menggunakan keyword extends.
+      class Car {
+        constructor(brand) {
+          this.carname = brand;
+        }
+        present() {
+          return "I have a " + this.carname;
+        }
+      }
+
+      class Model extends Car { // mengambil method dr perent disini perentnya adalah car
+        constructor(brand, mod) {
+          super(brand); // untuk mengakses properti perent
+          this.model = mod;
+        }
+        show() {
+          return this.present() + ", it is a " + this.model;
+        }
+      }
+
+      let myCar = new Model("Ford", "Mustang");
+      console.log("🚀 ~ file: object.html:252 ~ myCar:", myCar.show()) 
+      // inheritance end 
+
+      // Polymorphism -> konsep membaut berbagai var/method yang sama tetapi memiliki nilai yang berbeda
+      class indonesian {
+        constructor (name){
+          this.nama = name
+        }
+        menyapa () {
+          return `Halo nama saya ${this.nama}`
+        }
+      }
+      
+      class Java extends indonesian {
+        constructor(nama){
+          super(nama)
+        }
+        menyapa () {
+          return `Sugeng enjing, nama kulo ${this.nama}`
+        }
+      }
+      const indo = new indonesian ('Yon')
+      const jwo = new Java ('Yon')
+      console.log("🚀 ~ file: object.html:274 ~ indo:", indo.menyapa())
+      console.log("🚀 ~ file: object.html:275 ~ jwo:", jwo.menyapa())
+      // Polymorphism end
     </script>
   </body>
 </html>
