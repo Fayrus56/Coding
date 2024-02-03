@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cekrekan Lampu</title>
-</head>
-<body>
+    <style>
+      .allWrapper {
+        display: flexbox;
+        max-width: 200px;
+        max-height: 600px;
+        background-color: aquamarine;
+        padding: 25px;
+        margin: 1.8rem;
+        border: 1.3px solid red;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      button {
+        padding: 19px;
+        margin-top: 10px;
+        width: 150px;
+        height: 25px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #d3bed3;
+        border-radius: 3px;
+      }
+      .inlane {
+        display: flex;
+        margin: 20px;
+        top: 30px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      h1{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- * judul -->
     <h1>Melatih Logic</h1>
-</body>
+    <div class="inlane">
+        <!-- *pembungkus tombol dan lampu1 => ini menggunakan addEventListener -->
+        <div class="allWrapper">
+          <img
+            src="/studi kasus atau projek/aCekrekan Lampu/assets/images/off.png"
+            alt="Lampu On"
+            id="lampu1"
+          />
+          <!-- tombol 1 start -->
+          <div class="wrapper">
+            <button id="saklar1">On the lamp</button>
+            <button id="saklar2">Off the lamp</button>
+          </div>
+          <!-- tombol 1 end -->
+        </div>
+        <!-- Ini lampu 2 -->
+        <!-- !ini akan fake function biasa -->
+        <div class="allWrapper">
+          <img
+            src="/studi kasus atau projek/aCekrekan Lampu/assets/images/off.png"
+            alt="Lampu 2"
+            id="lampu2"
+          />
+          <!-- pembungkus tombol 2 -->
+          <div class="wrapper">
+            <button onclick="OnOffLamp('on')">On the lamp</button>
+            <button onclick="OnOffLamp('off')">Of the lamp</button>
+          </div>
+          <!-- tombol 2 end -->
+        </div>
+        <!-- lampu 2 end -->
+    </div> <!-- ini pembungkus semuanya -->
+    <script src="cekrekan.js"></script>
+  </body>
 </html>
