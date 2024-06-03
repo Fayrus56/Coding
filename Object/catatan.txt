@@ -1,0 +1,2 @@
+oop = sudut pandang bahsa pemrograman berdasar objek
+oop bertujuan untuk mempermudah dalam membaca kode yang kompleks
