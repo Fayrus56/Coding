@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ini contoh Switch statement</h1>
+    <p id="hasil1"></p>
+    <p id="hasil2"></p>
+    <Script>
+        // ini contoh switch
+        let pilihan = prompt ('masukkan warna!')
+        switch (pilihan) {
+            case "merah": // ketika user memasukkan nilai "merah", maka kode dibawh ini akan dieksekusi
+                console.log("merah");
+                let hasil1 = document.getElementById('hasil1').innerHTML = "halo merah"
+                break;
+            // jika user memasukkan warna lainnya maka kode yang dieksekusi adalah default
+            default:
+                let hasil2 = document.getElementById('hasil2').innerHTML = "warna tidak ada"
+                break;
+        }
+
+    </Script>
+</body>
+
+</html>

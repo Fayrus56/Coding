@@ -1,0 +1,5 @@
+Switch statement merupakan salah satu jenis conditional statement pada bahasa pemrograman JavaScript yang digunakan untuk melakukan percabangan kode program. Switch statement digunakan ketika kita ingin mengevaluasi sebuah variabel atau ekspresi untuk beberapa nilai yang berbeda dan mengeksekusi kode program yang spesifik berdasarkan nilai tersebut.
+
+Cara Kerja Switch Statement
+
+Switch statement bekerja dengan mengevaluasi sebuah variabel atau ekspresi dan membandingkannya dengan beberapa nilai yang berbeda. Jika nilai variabel atau ekspresi sama dengan salah satu nilai yang didefinisikan dalam switch statement, maka kode program yang terkait dengan nilai tersebut akan dieksekusi. Jika tidak ada nilai yang cocok, maka kode program yang terkait dengan blok default akan dieksekusi.
