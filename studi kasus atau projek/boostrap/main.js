@@ -1,6 +1,6 @@
 //  ini untuk ke ig ku
 function tIG() {
-  window.open("https://www.instagram.com/ysssyf_fyrs/", "_blank");
+  window.open("https://www.instagram.com/yusuf_frys/", "_blank");
 }
 
 // ini untuk ke no wa

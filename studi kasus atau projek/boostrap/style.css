@@ -3,6 +3,10 @@
   background-color: var(--bs-body-bg);
 }
 
+/* about me */
+.col {
+  margin: 50px;
+}
 /* style about me  */
 .row {
   margin-left: 10px;
